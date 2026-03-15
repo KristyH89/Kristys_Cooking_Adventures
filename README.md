@@ -1,9 +1,11 @@
-# My-learning-process
+# Workshop2_HTML_CSS
 
 For this workshop project, I chose to combine two things I truly enjoy: building websites and cooking (and of course, enjoying the food as well).
 With this website, I want to showcase some of my cooking skills while practicing and demonstrating my HTML and CSS knowledge. This project allows me to be creative both in the kitchen and in front of the computer.
 
 The original workshop instructions are included below this report. I used them as a guideline and followed each step carefully while developing the project.
+
+Go to https://kristyh89.github.io/Workshop2_HTML_CSS/ to view the result. I will keep adding recipies to the website. 
 
 ---
 
