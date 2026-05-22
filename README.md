@@ -17,14 +17,14 @@ Go to https://kristyh89.github.io/Workshop2_HTML_CSS/ to view the result. I will
 
 This document contains the different steps, improvements, and lessons learned while building this website.
 
-👉 [Read the full development process](HTML-CSS_Workshopp.md) 
+👉 [Read the full development process](website-development-steps.md) 
 
 
 ---
 
 ## 📘 Project Instructions
 
-👉 [View project instructions](HTML-CSS_Workshopp.md) 
+👉 [View project instructions](HTML-CSS_Workshop.md) 
 
 ---
 
