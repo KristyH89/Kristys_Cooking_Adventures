@@ -374,6 +374,25 @@ main p {
   object-fit: contain;
 }
 
+/* =========================================
+   10b. RECIPE SUB-SECTIONS (KEBAB / PITA / SAUCE)
+========================================= */
+
+.recipe-section {
+  margin-top: 30px;
+  padding: 20px;
+  border-left: 6px solid rgb(54, 151, 111);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.recipe-section h3 {
+  margin-top: 0;
+  color: rgb(54, 151, 111);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 
 /* =====================================================
    11. FOOTER
