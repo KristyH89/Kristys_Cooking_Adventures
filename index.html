@@ -1,116 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Adventures with Kristy</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/fork-knife.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooking Adventures with Kristy</title>
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="images/fork-knife.png" />
 </head>
 
-<body class="home-page"></body>
-   <header>
-        <nav>
-            <ul class="nav-links">
-               <li><a href="index.html">Home</a></li>
-               <li><a href="food.html">Food</a></li>
-               <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-  
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-  <main>
-    <section class="intro">
-      <h1>Welcome to my website!</h1><br> 
-      <p>Discover my favorite recipes and cooking adventures while at the same time following my journey 
-         as I learn and grow in HTML and CSS on my path to becoming a full-stack developer.</p>
+  <!-- LOGO BANNER -->
+<header class="w-full bg-white py-6 flex justify-center">
+  <img 
+    src="images/logoindex4.jpg" 
+    alt="Kristy's Cooking Adventures" 
+    class="max-w-3xl w-full h-auto"
+  />
+</header>
 
-      <p>
-        This website combines two of my biggest passions: cooking and technology. 
-        Here I experiment not only with flavors in the kitchen, but also with layouts, 
-        styling, and structure in web development.
-      </p>
-    </section>
+<!-- NAVBAR -->
+<nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+  <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+    <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+    <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+    <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+  </ul>
+</nav>
 
-    <section class="goals">
-      <h2>My Learning Goals</h2>
-      <table class="goals-table">
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>What I Am Learning</th>
-            <th>Level</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HTML</td>
-            <td>Semantic structure and accessibility</td>
-            <td>Beginner → Intermediate</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>Flexbox, layout, responsive design</td>
-            <td>Beginner → Intermediate</td>
-          </tr>
-          <tr>
-            <td>Git & GitHub</td>
-            <td>Version control and deployment</td>
-            <td>Beginner → Intermediate</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <!-- MAIN CONTENT -->
+ <section class="w-full bg-[#f3faf7] py-16">
+  <div class="max-w-3xl mx-auto text-center px-6">
+    <h1 class="text-4xl font-bold text-green-700 mb-6">Welcome to my website!</h1>
 
-    <section class="ice-cream-steps">
-      <h2>From Ingredients to Happiness</h2>
-      <p>
-        Just like learning HTML and CSS, making homemade ice cream takes time.<br>
-        First, you prepare the waffles. Then you make the ice cream.<br>
-        Step by step, layer by layer, until everything comes together.<br>
-        The process may take patience, but the result is worth it.
-      </p>
+    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+      Discover my favorite recipes and cooking adventures while at the same time following my journey 
+      as I learn and grow in HTML and CSS on my path to becoming a full-stack developer.
+    </p>
 
-      <div class="ice-steps">
-        <div class="step">
-          <img src="images/homemade-cones.jpeg" alt="Homemade waffles">
-          <p>Step 1: Baking the waffles</p>
-        </div>
-        <div class="step">
-          <img src="images/icecream-made-in-snow.jpeg" alt="Homemade ice cream">
-          <p>Step 2: Making the ice cream</p>
-        </div>
-        <div class="step">
-          <img src="images/icecream-in-cone2.jpeg" alt="Final result">
-          <p>Step 3: The final combination</p>
-        </div>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      This website combines two of my biggest passions: cooking and technology. 
+      Here I experiment not only with flavors in the kitchen, but also with layouts, 
+      styling, and structure in web development.
+    </p>
+  </div>
+</section>
+
+
+
+  <!-- LEARNING GOALS (variant B, professioneel, modern) -->
+  <section class="mt-20">
+    <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">My Learning Goals</h2>
+
+    <div class="w-full flex justify-center">
+      <div class="w-full max-w-3xl rounded-xl shadow-lg overflow-hidden border border-green-700">
+
+        <!-- Green top bar -->
+        <div class="bg-[rgb(54,151,111)] h-3 w-full"></div>
+
+        <table class="w-full text-left">
+
+          <thead class="bg-[rgb(54,151,111)] text-white">
+            <tr>
+              <th class="p-3 font-semibold">Skill</th>
+              <th class="p-3 font-semibold">What I Am Learning</th>
+              <th class="p-3 font-semibold">Level</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <!-- HTML -->
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">HTML</td>
+              <td class="p-3 border-t border-green-700">Semantic structure and accessibility</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- CSS -->
+            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">CSS + Frameworks</td>
+              <td class="p-3 border-t border-green-700">Flexbox, responsive design, Tailwind, Bootstrap</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- Git -->
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Git & GitHub</td>
+              <td class="p-3 border-t border-green-700">Version control, branching, merging</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- Java Fundamentals -->
+            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Java Fundamentals</td>
+              <td class="p-3 border-t border-green-700">Syntax, loops, methods, debugging</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- OOP -->
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Object-Oriented Programming</td>
+              <td class="p-3 border-t border-green-700">Classes, inheritance, polymorphism</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- Lambda -->
+            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Lambda & Stream API</td>
+              <td class="p-3 border-t border-green-700">Functional programming, filtering, mapping</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- SQL -->
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">SQL & JDBC</td>
+              <td class="p-3 border-t border-green-700">CRUD, joins, prepared statements</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- Spring -->
+            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Spring Core, Boot & JPA</td>
+              <td class="p-3 border-t border-green-700">DI, entities, repositories, relationships</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- REST -->
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">RESTful API</td>
+              <td class="p-3 border-t border-green-700">Controllers, HTTP methods, status codes</td>
+              <td class="p-3 border-t border-green-700">Intermediate</td>
+            </tr>
+
+            <!-- React -->
+            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">ReactJS L3</td>
+              <td class="p-3 border-t border-green-700">Components, Axios, Router</td>
+              <td class="p-3 border-t border-green-700">Upcoming</td>
+            </tr>
+
+            <!-- Prompt Engineering -->
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Prompt Engineering</td>
+              <td class="p-3 border-t border-green-700">AI prompting, LLM interaction</td>
+              <td class="p-3 border-t border-green-700">Upcoming</td>
+            </tr>
+
+            <!-- Spring AI -->
+            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Spring AI L1</td>
+              <td class="p-3 border-t border-green-700">AI integration, model usage</td>
+              <td class="p-3 border-t border-green-700">Upcoming</td>
+            </tr>
+
+            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
+              <td class="p-3 border-t border-green-700">Spring AI L2</td>
+              <td class="p-3 border-t border-green-700">Advanced AI workflows</td>
+              <td class="p-3 border-t border-green-700">Upcoming</td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
 
+  <!-- ICE CREAM STEPS (compact, professioneel, modern) -->
+  <section class="w-full bg-[#f3faf7] py-16 mt-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
 
-<footer>
-  <nav class="footer-nav">
-    <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="food.html">Food</a></li>
-          <li><a href="contact.html">Contact</a></li>
+    <h2 class="text-3xl font-bold text-green-700 mb-4">From Ingredients to Happiness</h2>
+
+    <p class="text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto">
+      Just like learning HTML and CSS, making homemade ice cream takes time.<br>
+      First, you prepare the waffles. Then you make the ice cream.<br>
+      Step by step, layer by layer, until everything comes together.<br>
+      The process may take patience, but the result is worth it.
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+
+      <div class="text-center">
+        <img src="images/homemade-cones.jpeg"
+             class="w-[220px] rounded-lg shadow-md mx-auto"
+             alt="Homemade waffles">
+        <p class="mt-2 font-medium text-gray-700">Step 1: Baking the waffles</p>
+      </div>
+
+      <div class="text-center">
+        <img src="images/icecream-made-in-snow.jpeg"
+             class="w-[220px] rounded-lg shadow-md mx-auto"
+             alt="Homemade ice cream">
+        <p class="mt-2 font-medium text-gray-700">Step 2: Making the ice cream</p>
+      </div>
+
+      <div class="text-center">
+        <img src="images/icecream-in-cone2.jpeg"
+             class="w-[220px] rounded-lg shadow-md mx-auto"
+             alt="Final result">
+        <p class="mt-2 font-medium text-gray-700">Step 3: The final combination</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+
+  <!-- FOOTER -->
+ <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+  <nav class="mb-3">
+    <ul class="flex justify-center gap-6 text-lg font-medium">
+      <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+      <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+      <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
     </ul>
   </nav>
 
-  <p>
-    &copy; 2026 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
-  <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
-</svg> KristyH89
-    <button class="footer-btn">
-      
-    </button>
+  <p class="text-center text-green-200 text-sm">
+    © 2026 KristyH89 🍴
   </p>
 </footer>
-
- 
 
 </body>
 </html>
