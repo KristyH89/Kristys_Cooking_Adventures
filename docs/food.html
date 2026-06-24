@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food – Nicky’s Cooking Adventures</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#f3faf7]">
+
+  <!-- LOGO BANNER -->
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img 
+      src="/Workshop2_HTML_CSS/assets/logoindex4-grGiZbhq.jpg" 
+      alt="Kristy's Cooking Adventures" 
+      class="max-w-3xl w-full h-auto"
+    />
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+      <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+      <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-16">
+
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
+      Explore My Recipes
+    </h1>
+
+    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-16">
+      Choose a category to explore delicious homemade recipes.  
+      Click on a picture to open the category.
+    </p>
+
+    <!-- CATEGORY GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Baking & Desserts -->
+      <a href="categories/baking-desserts.html" class="block group">
+        <div class="relative rounded-xl overflow-hidden shadow-lg">
+          <img src="/Workshop2_HTML_CSS/assets/rabarbercake-aliZMQ3e.jpeg"
+               class="w-full h-56 object-cover transition group-hover:scale-105"
+               alt="Baking & Desserts">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+  <h2 class="text-white text-2xl font-bold tracking-wide">Baking & Desserts</h2>
+          </div>
+        </div>
+      </a>
+
+      <!-- Easy -->
+      <a href="categories/easy.html" class="block group">
+        <div class="relative rounded-xl overflow-hidden shadow-lg">
+          <img src="/Workshop2_HTML_CSS/assets/vanilje-kvarg-pankakor-Bkl7abGT.jpeg"
+               class="w-full h-56 object-cover transition group-hover:scale-105"
+               alt="Easy Recipes">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+  <h2 class="text-white text-2xl font-bold tracking-wide">Easy</h2>
+          </div>
+        </div>
+      </a>
+
+      <!-- Main Dishes -->
+      <a href="categories/main-dishes.html" class="block group">
+        <div class="relative rounded-xl overflow-hidden shadow-lg">
+          <img src="/Workshop2_HTML_CSS/assets/vildsvin-stamppot-wortels-DLd7HrNL.jpeg"
+               class="w-full h-56 object-cover transition group-hover:scale-105"
+               alt="Main Dishes">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+  <h2 class="text-white text-2xl font-bold tracking-wide">Main Dishes</h2>
+          </div>
+        </div>
+      </a>
+
+      <!-- Quick & Easy -->
+      <a href="categories/quick-easy.html" class="block group">
+        <div class="relative rounded-xl overflow-hidden shadow-lg">
+          <img src="/Workshop2_HTML_CSS/assets/wrappizza-Ck1Sn0QM.jpeg"
+               class="w-full h-56 object-cover transition group-hover:scale-105"
+               alt="Quick & Easy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+  <h2 class="text-white text-2xl font-bold tracking-wide">Quick & Easy</h2>
+          </div>
+        </div>
+      </a>
+
+      <!-- Slow & Special -->
+      <a href="categories/slow-special.html" class="block group">
+        <div class="relative rounded-xl overflow-hidden shadow-lg">
+          <img src="/Workshop2_HTML_CSS/assets/vildsvin-rib-med-rod-kal-och-potatismos-BFjlmZ-B.jpeg"
+               class="w-full h-56 object-cover transition group-hover:scale-105"
+               alt="Slow & Special">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+  <h2 class="text-white text-2xl font-bold tracking-wide">Slow & Special</h2>
+          </div>
+        </div>
+      </a>
+
+      <!-- Wild Game -->
+      <a href="categories/wild-game.html" class="block group">
+        <div class="relative rounded-xl overflow-hidden shadow-lg">
+          <img src="/Workshop2_HTML_CSS/assets/homemade-kebab-and-pita-oJyqd6K5.jpeg"
+               class="w-full h-56 object-cover transition group-hover:scale-105"
+               alt="Wild Game">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+  <h2 class="text-white text-2xl font-bold tracking-wide">Wild Game</h2>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 KristyH89 
+    </p>
+  </footer>
+
+</body>
+</html>
