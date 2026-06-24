@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Adventures with Kristy</title>
-    <script type="module" src="/src/main.js"></script>
-    <link rel="icon" type="image/png" href="images/fork-knife.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Kristy's Cooking Adventures</title>
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="images/fork-knife.png" />
 </head>
 
-<body class="home-page"></body>
-   <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../food.html">Food</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="min-h-screen flex flex-col bg-[#e9f7f1]">
 
-<main>
-<div class="recipe">
-<pre><code>
+
+ <!-- LOGO BANNER -->
+<header class="w-full bg-white py-6 flex justify-center">
+  <img 
+    src="../images/logoindex4.jpg" 
+    alt="Kristy's Cooking Adventures" 
+    class="max-w-3xl w-full h-auto"
+  />
+</header>
+
+  <!-- NAVBAR -->
+<nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+  <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+    <li><a href="../index.html" class="hover:text-green-200">Home</a></li>
+    <li><a href="../food.html" class="hover:text-green-200">Food</a></li>
+    <li><a href="../contact.html" class="hover:text-green-200">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="flex-grow max-w-4xl mx-auto px-6 py-16">
+
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
+    Gevulde Speculaas (Dutch Spiced Almond Pastry)
+  </h1>
+
+  <!-- RECIPE CARD -->
+  <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
+    <pre class="whitespace-pre-wrap font-mono text-gray-800 text-sm leading-relaxed">
+
 ALGORITHM Gevulde Speculaas (Dutch Spiced Almond Pastry)
 
 INPUT
@@ -35,7 +54,7 @@ Pinch of salt
 
 125 g almonds
 125 g granulated sugar
-Zest of ¼ organic lemon
+Zest of ½ organic lemon
 1 egg white
 
 20–25 whole almonds
@@ -43,80 +62,75 @@ Zest of ¼ organic lemon
 1 tbsp milk or heavy cream
 
 PROCESS
-
-Combine flour + sugar + butter + spice mix + baking powder + salt + milk
+Combine flour + sugar + butter + spice mix + baking powder + salt + milk.
 Mix UNTIL cohesive dough forms.
 Refrigerate ≥ 30 minutes.
 
-Pulse almonds UNTIL finely ground (do not over-process).
+Pulse almonds UNTIL finely ground.
 Add sugar + lemon zest + egg white.
-Pulse briefly UNTIL almond paste forms.
+Pulse UNTIL almond paste forms.
 
 Preheat oven to 180°C.
-Prepare baking dish (grease or line with parchment).
+Prepare baking dish.
 
 Divide dough INTO 2 equal portions.
-Roll out first portion to fit dish.
-Place into dish as base layer.
+Roll out first portion and place as base layer.
 
-Spread almond paste evenly over dough.
+Spread almond paste evenly.
 
 Roll out second portion.
 Place over filling.
-Seal edges gently.
+Seal edges.
 
 Whisk egg yolk + milk.
 Brush top layer.
-Arrange whole almonds on top.
-Brush again with egg mixture.
+Arrange whole almonds.
+Brush again.
 
 Bake 40 minutes at 180°C.
 Cool completely before slicing.
 
 OPTIONAL
-Create homemade speculaas spice mix:
+Homemade speculaas spice mix:
 8 tbsp cinnamon
 2 tbsp nutmeg
 2 tbsp ground cloves
-1 tbsp ground ginger
+1 tbsp ginger
 2 tsp mace
 2 tsp cardamom
-
-Mix thoroughly and store airtight.
 
 OUTPUT
 Golden-brown spiced pastry with soft almond center.
 Best sliced when fully cooled.
-</code></pre>
-</div>
-<div class="recipe-end-image">
-  <img src="../images/gevulde-speculaas.jpeg" alt="Gevulde speculaas">
-</div>
+    </pre>
+  </div>
 
-  </main>
-<br> 
-    <footer>
-  <nav class="footer-nav">
-    <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../food.html">Food</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- IMAGE UNDER THE CARD -->
+  <div class="flex justify-center mt-12">
+    <img 
+      src="../images/gevulde-speculaas.jpeg" 
+      alt="Gevulde Speculaas" 
+      class="rounded-xl shadow-lg max-w-xl w-full"
+    />
+  </div>
+
+</main>
 
 
+  <!-- FOOTER -->
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
 
-  <p>
-    &copy; 2026 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
-  <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
-</svg> KristyH89
-    <button class="footer-btn">
-      
-    </button>
-  </p>
-</footer>
-
- 
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 KristyH89 
+    </p>
+  </footer>
 
 </body>
 </html>

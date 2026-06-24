@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Adventures with Kristy</title>
-    <script type="module" src="/src/main.js"></script>
-    <link rel="icon" type="image/png" href="images/fork-knife.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Kristy's Cooking Adventures</title>
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="images/fork-knife.png" />
 </head>
 
-<body class="home-page"></body>
-   <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../food.html">Food</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="min-h-screen flex flex-col bg-[#e9f7f1]">
 
-<main>
-<div class="recipe">
-<pre><code>
+ <!-- LOGO BANNER -->
+<header class="w-full bg-white py-6 flex justify-center">
+  <img 
+    src="../images/logoindex4.jpg" 
+    alt="Kristy's Cooking Adventures" 
+    class="max-w-3xl w-full h-auto"
+  />
+</header>
+
+  <!-- NAVBAR -->
+<nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+  <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+    <li><a href="../index.html" class="hover:text-green-200">Home</a></li>
+    <li><a href="../food.html" class="hover:text-green-200">Food</a></li>
+    <li><a href="../contact.html" class="hover:text-green-200">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="flex-grow max-w-4xl mx-auto px-6 py-16">
+
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
+    Tiramisu
+  </h1>
+
+  <!-- RECIPE CARD -->
+  <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
+    <pre class="whitespace-pre-wrap font-mono text-gray-800 text-sm leading-relaxed">
+
 ALGORITHM Tiramisu
 
 INPUT
-- 1 container mascarpone
-- 1 container heavy cream
-- ±120 g sugar
-- 1–2 tsp almond extract
-- 1 package ladyfingers
-- 1–2 cups brewed coffee
-- Cocoa powder (for dusting)
+1 container mascarpone
+1 container heavy cream
+±120 g sugar
+1–2 tsp almond extract
+1 package ladyfingers
+1–2 cups brewed coffee
+Cocoa powder (for dusting)
 
 PROCESS
-
 1. Brew coffee.
 2. Transfer coffee to dipping bowl.
-3. Add almond extract to coffee.
+3. Add almond extract.
 
 4. Whip mascarpone + heavy cream + sugar
    UNTIL stiff and creamy.
 
 5. Select deep serving dish.
 
-6. Layer mascarpone mixture (base layer).
+6. Spread mascarpone mixture (base layer).
 
 7. FOR each layer of ladyfingers:
-      Dip ladyfingers in coffee mixture (2–3 seconds).
+      Dip ladyfingers in coffee (2–3 seconds).
       Place over mascarpone layer.
-      Add new layer of mascarpone mixture.
+      Add new mascarpone layer.
    END FOR
 
 8. Finish with mascarpone layer on top.
@@ -61,44 +78,42 @@ PROCESS
       Dust with cocoa powder.
 
 OPTIONAL MODULES
-
 - Replace almond extract WITH amaretto.
 - Reduce sugar to taste.
-- Add strawberry jam layer between cookies.
+- Add strawberry jam layer.
 - Top with fresh strawberries.
 
-
 OUTPUT
-- Chilled, layered tiramisu ready to serve.
-</code></pre>
-</div>
-<div class="recipe-end-image">
-  <img src="../images/tiramisu.jpeg" alt="Tiramisu">
-</div>
-      </main>
-<br> 
-    <footer>
-  <nav class="footer-nav">
-    <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../food.html">Food</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+Chilled, layered tiramisu ready to serve.
+    </pre>
+  </div>
 
+  <!-- IMAGE UNDER THE CARD -->
+  <div class="flex justify-center mt-12">
+    <img 
+      src="../images/tiramisu.jpeg" 
+      alt="Tiramisu" 
+      class="rounded-xl shadow-lg max-w-xl w-full"
+    />
+  </div>
 
+</main>
 
-  <p>
-    &copy; 2026 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
-  <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
-</svg> KristyH89
-    <button class="footer-btn">
-      
-    </button>
-  </p>
-</footer>
+   
+  <!-- FOOTER -->
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
 
- 
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 KristyH89 
+    </p>
+  </footer>
 
 </body>
 </html>

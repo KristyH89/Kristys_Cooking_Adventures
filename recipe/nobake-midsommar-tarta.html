@@ -1,108 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Adventures with Kristy</title>
-    <script type="module" src="/src/main.js"></script>
-    <link rel="icon" type="image/png" href="images/fork-knife.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Kristy's Cooking Adventures</title>
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="images/fork-knife.png" />
 </head>
 
-<body class="home-page"></body>
-   <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../food.html">Food</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="min-h-screen flex flex-col bg-[#e9f7f1]">
 
-<main>
-<div class="recipe">
-<pre><code>
-ALGORITHM No-Bake Midsommar tårta
+ <!-- LOGO BANNER -->
+<header class="w-full bg-white py-6 flex justify-center">
+  <img 
+    src="../images/logoindex4.jpg" 
+    alt="Kristy's Cooking Adventures" 
+    class="max-w-3xl w-full h-auto"
+  />
+</header>
 
-INPUT
-- 300 g cream cheese (Philadelphia)
-- 300 g cold heavy cream
-- 100 g powdered sugar
-- 1½ tsp vanilla extract
-- ±300 g cookies
-- Whole milk (for dipping)
-- Sprinkles (for decoration)
+  <!-- NAVBAR -->
+<nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+  <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+    <li><a href="../index.html" class="hover:text-green-200">Home</a></li>
+    <li><a href="../food.html" class="hover:text-green-200">Food</a></li>
+    <li><a href="../contact.html" class="hover:text-green-200">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="flex-grow max-w-4xl mx-auto px-6 py-16">
+
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
+    Midsommar Tårta (Swedish Summer Strawberry Cake)
+  </h1>
+
+  <!-- RECIPE CARD -->
+  <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
+    <pre class="whitespace-pre-wrap font-mono text-gray-800 text-sm leading-relaxed">
+
+ALGORITHM Midsommar Tårta (Swedish Summer Strawberry Cake)
+
+------------------------------------------------------------
+SPONGE CAKE
+
+INGREDIENTS
+3 eggs
+150 g sugar
+150 g flour
+1 tsp baking powder
+Pinch of salt
 
 PROCESS
+Preheat oven to 175°C.
+Line a round cake pan.
 
-1. In large bowl:
-      Combine cream cheese + powdered sugar + vanilla extract + heavy cream.
-      Whip UNTIL stiff peaks form.
-      Stop mixing when cream holds its shape.
+Whisk eggs + sugar UNTIL pale and fluffy.
+Mix flour + baking powder + salt.
+Fold dry ingredients gently into egg mixture.
 
-2. Select serving dish or cake board.
+Pour batter into pan.
+Bake 25–30 minutes UNTIL golden and springy.
+Cool completely.
 
-3. FOR each cookie layer (total: 4 layers):
-      Dip each cookie in milk (≈5 seconds).
-      Arrange cookies to form base layer.
-      Add even layer of cheesecake cream.
-   END FOR
+------------------------------------------------------------
+FILLING
 
-4. Frost cake:
-      Cover top and sides completely with remaining cream.
+INGREDIENTS
+300 ml heavy cream
+1–2 tbsp sugar
+1 tsp vanilla extract
+Fresh strawberries, sliced
+OPTIONAL: strawberry jam
 
-5. Refrigerate:
-      Chill ≥ 4 hours (preferably overnight).
-      Do NOT add sprinkles yet.
+PROCESS
+Whip cream + sugar + vanilla UNTIL soft peaks.
+Slice strawberries.
 
-6. Before serving:
-      Remove from fridge 30 minutes in advance.
-      Decorate with sprinkles.
-      Slice and serve.
+Cut sponge cake INTO 2 layers.
+Spread jam (optional).
+Add whipped cream.
+Add sliced strawberries.
 
-STORAGE
-- Keep covered in refrigerator.
-- Shelf life: 5–7 days.
+Place top layer back on cake.
 
-OPTIONAL MODULE
-- Add a thin layer of (strawberry) jam between cookie layers.
-- Adjust cake size by changing number of cookies per layer.
+------------------------------------------------------------
+TOPPING
 
+INGREDIENTS
+Fresh strawberries
+Whipped cream (optional)
+Powdered sugar
+
+PROCESS
+Decorate top with whole or halved strawberries.
+Dust lightly with powdered sugar.
+Add extra whipped cream if desired.
+
+------------------------------------------------------------
 OUTPUT
-- Soft, layered no-bake cookie cake.
-- Creamy texture with milk-softened cookie layers.
-</code></pre>
-</div>
+A light, fluffy Swedish summer cake with fresh strawberries,
+whipped cream, and soft vanilla sponge — perfect for Midsommar.
+    </pre>
+  </div>
 
-<div class="recipe-end-image">
-  <img src="../images/midsommar-tarta-del.jpeg" alt="No bake Midsommar tårta">
-</div>
+  <!-- IMAGE UNDER THE CARD -->
+  <div class="flex justify-center mt-12">
+    <img 
+      src="../images/midsommar-tarta.jpeg" 
+      alt="Midsommar tårta" 
+      class="rounded-xl shadow-lg max-w-xl w-full"
+    />
+  </div>
 
-    
-      </main>
-<br> 
-    <footer>
-  <nav class="footer-nav">
-    <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../food.html">Food</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+</main>
 
+   
+  <!-- FOOTER -->
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
 
-
-  <p>
-    &copy; 2026 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
-  <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
-</svg> KristyH89
-    <button class="footer-btn">
-      
-    </button>
-  </p>
-</footer>
-
- 
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 KristyH89 
+    </p>
+  </footer>
 
 </body>
 </html>
