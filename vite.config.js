@@ -37,7 +37,9 @@ export default defineConfig({
         tiramisu: resolve(__dirname, 'recipe/tiramisu.html'),
         vildstamppotwortel: resolve(__dirname, 'recipe/vildsvin-stamppot-wortels.html'),
         ribRodeKool: resolve(__dirname, 'recipe/vildsvinrib-red-cabbage.html'),
-        wrappizza: resolve(__dirname, 'recipe/wrap-pizza.html')
+        wrappizza: resolve(__dirname, 'recipe/wrap-pizza.html'),
+        potatogratin: resolve(__dirname, 'recipe/potatogratin.html'),
+        noodles: resolve(__dirname, 'recipe/noodles.html')
 
         
       }
