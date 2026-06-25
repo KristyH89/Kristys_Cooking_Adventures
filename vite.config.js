@@ -7,6 +7,8 @@ export default defineConfig({
   base: '/Workshop2_HTML_CSS/',
   plugins: [tailwindcss()],
   build: {
+    outDir: 'docs', 
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         // Main pages
@@ -39,7 +41,7 @@ export default defineConfig({
         ribRodeKool: resolve(__dirname, 'recipe/vildsvinrib-red-cabbage.html'),
         wrappizza: resolve(__dirname, 'recipe/wrap-pizza.html'),
         potatogratin: resolve(__dirname, 'recipe/potatogratin.html'),
-        noodles: resolve(__dirname, 'recipe/noodles.html')
+        noodles: resolve(__dirname, 'recipe/noodles.html'),
 
         
       }
