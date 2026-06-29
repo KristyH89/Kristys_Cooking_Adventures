@@ -1,22 +1,26 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+import handlebars from 'vite-plugin-handlebars'
 import { resolve } from 'path'
 
 export default defineConfig({
   root: '.',
   base: '/Workshop2_HTML_CSS/',
-  plugins: [tailwindcss()],
+  plugins: [
+    tailwindcss(),
+    handlebars({
+      partialDirectory: resolve(__dirname, 'partials'),
+    }),
+  ],
   build: {
-    outDir: 'docs', 
+    outDir: 'docs',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        // Main pages
         index: resolve(__dirname, 'index.html'),
         food: resolve(__dirname, 'food.html'),
         contact: resolve(__dirname, 'contact.html'),
 
-        // Category pages
         baking: resolve(__dirname, 'categories/baking-desserts.html'),
         easy: resolve(__dirname, 'categories/easy.html'),
         main: resolve(__dirname, 'categories/main-dishes.html'),
@@ -24,7 +28,6 @@ export default defineConfig({
         slow: resolve(__dirname, 'categories/slow-special.html'),
         wild: resolve(__dirname, 'categories/wild-game.html'),
 
-        // Recipe pages 
         gevuldeSpeculaas: resolve(__dirname, 'recipe/Gevulde-speculaas.html'),
         macAndCheese: resolve(__dirname, 'recipe/healthier-mac-and-cheese.html'),
         kebab: resolve(__dirname, 'recipe/homemade-kebab-and-pita.html'),
@@ -43,11 +46,9 @@ export default defineConfig({
         potatogratin: resolve(__dirname, 'recipe/potatogratin.html'),
         noodles: resolve(__dirname, 'recipe/noodles.html'),
         sweetpotato: resolve(__dirname, 'recipe/mediterranean-sweet-potato-salad.html'),
-        
-      }
-    }
-  }
+      },
+    },
+  },
 })
 
 
-      
