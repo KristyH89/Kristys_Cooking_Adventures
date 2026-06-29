@@ -5,7 +5,6 @@ import { resolve } from 'path'
 
 export default defineConfig({
   root: '.',
-  base: '/Workshop2_HTML_CSS/',
   plugins: [
     tailwindcss(),
     handlebars({
