@@ -22,9 +22,9 @@ This document contains the different steps, improvements, and lessons learned wh
 
 ---
 
-## 📘 Project Instructions
+## 📘 Workshop Instructions
 
-👉 [View project instructions](HTML-CSS_Workshop.md) 
+👉 [View workshop instructions](HTML-CSS_Workshop.md) 
 
 ---
 
