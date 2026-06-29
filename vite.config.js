@@ -3,17 +3,32 @@ import tailwindcss from '@tailwindcss/vite'
 import handlebars from 'vite-plugin-handlebars'
 import { resolve } from 'path'
 
+const base = '/Kristys_Cooking_Adventures/'
+
 export default defineConfig({
+  base,
   root: '.',
+
   plugins: [
     tailwindcss(),
+
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
+
+      context: {
+        base
+      },
+
+      helpers: {
+        route: (path) => `${base}${path}`
+      }
     }),
   ],
+
   build: {
     outDir: 'docs',
     emptyOutDir: true,
+
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'index.html'),
@@ -49,5 +64,3 @@ export default defineConfig({
     },
   },
 })
-
-
