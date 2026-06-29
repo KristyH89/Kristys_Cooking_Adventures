@@ -42,7 +42,7 @@ export default defineConfig({
         wrappizza: resolve(__dirname, 'recipe/wrap-pizza.html'),
         potatogratin: resolve(__dirname, 'recipe/potatogratin.html'),
         noodles: resolve(__dirname, 'recipe/noodles.html'),
-
+        sweetpotato: resolve(__dirname, 'recipe/mediterranean-sweet-potato-salad.html'),
         
       }
     }
