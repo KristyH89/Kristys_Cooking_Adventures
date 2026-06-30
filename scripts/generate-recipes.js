@@ -92,10 +92,41 @@ for (const category of categories) {
   console.log(`Generated categories/${category.slug}.html (${matchingRecipes.length} recipes)`);
 }
 
+// 8. Generate sitemap.xml listing every page on the site.
+//    Search engines use this to discover and index pages more reliably.
+console.log('Generating sitemap.xml...');
+
+const siteUrl = 'https://kristyh89.github.io/Kristys_Cooking_Adventures';
+const today = new Date().toISOString().split('T')[0];
+
+const staticPages = ['index.html', 'food.html', 'contact.html'];
+
+const sitemapUrls = [
+  ...staticPages.map((page) => `${siteUrl}/${page}`),
+  ...categories.map((category) => `${siteUrl}/categories/${category.slug}.html`),
+  ...recipes.map((recipe) => `${siteUrl}/recipe/${recipe.slug}.html`),
+];
+
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls
+  .map(
+    (url) => `  <url>
+    <loc>${url}</loc>
+    <lastmod>${today}</lastmod>
+  </url>`
+  )
+  .join('\n')}
+</urlset>
+`;
+
+writeFileSync(resolve(ROOT, 'sitemap.xml'), sitemapXml, 'utf-8');
+console.log(`Generated sitemap.xml with ${sitemapUrls.length} URLs.`);
+
 console.log(`Done. Generated ${generatedRecipeFiles.length} recipe page(s) and ${generatedCategoryFiles.length} category page(s).`);
 console.log('Add these entries to your vite.config.js rollupOptions.input:');
 
-// 8. Print the full input list entries needed for vite.config.js
+// 9. Print the full input list entries needed for vite.config.js
 for (const recipe of recipes) {
   const key = recipe.slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
   console.log(`        ${key}: resolve(__dirname, 'recipe/${recipe.slug}.html'),`);
