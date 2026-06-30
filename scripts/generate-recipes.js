@@ -80,6 +80,7 @@ for (const category of categories) {
 
   const html = categoryTemplate({
     base,
+    categorySlug: category.slug,
     categoryTitle: category.title,
     categoryDescription: category.description,
     recipes: matchingRecipes,
