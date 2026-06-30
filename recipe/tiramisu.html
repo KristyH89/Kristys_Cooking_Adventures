@@ -1,91 +1,119 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristy's Cooking Adventures</title>
+  <title>Tiramisu – Kristy's Cooking Adventures</title>
 
-<script type="module" src="/src/main.js"></script>
-<link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
-
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
 
 <body class="min-h-screen flex flex-col bg-[#e9f7f1]">
 
-  {{> navbar }}
-
-<main class="flex-grow max-w-4xl mx-auto px-6 py-16">
-
-  <!-- TITLE -->
-  <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
-    Tiramisu
-  </h1>
-
-  <!-- RECIPE CARD -->
-  <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
-    <pre class="whitespace-pre-wrap font-mono text-gray-800 text-sm leading-relaxed">
-
-ALGORITHM Tiramisu
-
-INPUT
-1 container mascarpone
-1 container heavy cream
-±120 g sugar
-1–2 tsp almond extract
-1 package ladyfingers
-1–2 cups brewed coffee
-Cocoa powder (for dusting)
-
-PROCESS
-1. Brew coffee.
-2. Transfer coffee to dipping bowl.
-3. Add almond extract.
-
-4. Whip mascarpone + heavy cream + sugar
-   UNTIL stiff and creamy.
-
-5. Select deep serving dish.
-
-6. Spread mascarpone mixture (base layer).
-
-7. FOR each layer of ladyfingers:
-      Dip ladyfingers in coffee (2–3 seconds).
-      Place over mascarpone layer.
-      Add new mascarpone layer.
-   END FOR
-
-8. Finish with mascarpone layer on top.
-
-9. Cover dish.
-10. Refrigerate ≥ 4 hours.
-
-11. Before serving:
-      Dust with cocoa powder.
-
-OPTIONAL MODULES
-- Replace almond extract WITH amaretto.
-- Reduce sugar to taste.
-- Add strawberry jam layer.
-- Top with fresh strawberries.
-
-OUTPUT
-Chilled, layered tiramisu ready to serve.
-    </pre>
-  </div>
-
-  <!-- IMAGE UNDER THE CARD -->
-  <div class="flex justify-center mt-12">
-    <img 
-      src="/images/recipe-photos/tiramisu.jpeg" 
-      alt="Tiramisu" 
-      class="rounded-xl shadow-lg max-w-xl w-full"
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img
+      src="/images/site/logoindex4.jpg"
+      alt="Kristy's Cooking Adventures"
+      class="max-w-3xl w-full h-auto"
     />
-  </div>
+  </header>
+  
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li>
+        <a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">
+          Home
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">
+          Food
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-16">
 
-</main>
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
+      Tiramisu
+    </h1>
 
-   
-  {{> footer }}
+    <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
 
+
+        <h2 class="text-lg font-bold text-green-700 mb-3">Ingredients</h2>
+        <ul class="list-disc list-inside mb-6 space-y-1 text-gray-800">
+          <li>1 container mascarpone</li>
+          <li>1 container heavy cream</li>
+          <li>±120 g sugar</li>
+          <li>1–2 tsp almond extract</li>
+          <li>1 package ladyfingers</li>
+          <li>1–2 cups brewed coffee</li>
+          <li>Cocoa powder (for dusting)</li>
+        </ul>
+
+        <h3 class="text-md font-bold text-green-700 mb-2">OPTIONAL MODULES</h3>
+        <ul class="list-disc list-inside mb-6 space-y-1 text-gray-800">
+          <li>Replace almond extract WITH amaretto.</li>
+          <li>Reduce sugar to taste.</li>
+          <li>Add strawberry jam layer.</li>
+          <li>Top with fresh strawberries.</li>
+        </ul>
+
+        <h2 class="text-lg font-bold text-green-700 mb-3">Process</h2>
+        <ol class="list-decimal list-inside mb-6 space-y-2 text-gray-800">
+          <li>Brew coffee.</li>
+          <li>Transfer coffee to dipping bowl.</li>
+          <li>Add almond extract.</li>
+          <li>Whip mascarpone + heavy cream + sugar UNTIL stiff and creamy.</li>
+          <li>Select deep serving dish.</li>
+          <li>Spread mascarpone mixture (base layer).</li>
+          <li>For each layer of ladyfingers: dip ladyfingers in coffee (2–3 seconds), place over mascarpone layer, add new mascarpone layer.</li>
+          <li>Finish with mascarpone layer on top.</li>
+          <li>Cover dish.</li>
+          <li>Refrigerate ≥ 4 hours.</li>
+          <li>Before serving: dust with cocoa powder.</li>
+        </ol>
+
+
+
+      <h3 class="text-md font-bold text-green-700 mb-2">Result</h3>
+      <p class="text-gray-700 mb-4">Chilled, layered tiramisu ready to serve.</p>
+
+
+
+    </div>
+
+    <div class="flex justify-center mt-12">
+      <img
+        src="/images/recipe-photos/tiramisu.jpeg"
+        alt="Tiramisu"
+        class="rounded-xl shadow-lg max-w-xl w-full"
+      />
+    </div>
+
+  </main>
+
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 Kristy's Cooking Adventures
+    </p>
+  </footer>
 </body>
 </html>

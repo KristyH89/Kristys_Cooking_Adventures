@@ -1,95 +1,154 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristy's Cooking Adventures</title>
+  <title>Pulled Wild Boar (or Pulled Pork) – Kristy's Cooking Adventures</title>
 
-<script type="module" src="/src/main.js"></script>
-<link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
-
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
 
 <body class="min-h-screen flex flex-col bg-[#e9f7f1]">
 
-{{> navbar }}
-
-<main class="flex-grow max-w-4xl mx-auto px-6 py-16">
-
-  <!-- TITLE -->
-  <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
-    Pulled Wild Boar (or Pulled Pork)
-  </h1>
-
-  <!-- RECIPE CARD -->
-  <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
-    <pre class="whitespace-pre-wrap font-mono text-gray-800 text-sm leading-relaxed">
-
-ALGORITHM Pulled Wild Boar (or Pulled Pork)
-
-INGREDIENTS
-
-MEAT
-1.5 kg wild boar shoulder or neck (or pork shoulder)
-
-DRY RUB
-1 tbsp brown sugar
-1 tbsp smoked paprika
-1 tbsp onion powder
-1 tsp garlic powder
-1 tsp salt
-1/2 tsp black pepper
-
-LIQUID
-150 ml beef stock
-50 ml natural vinegar
-1/2 tbsp soy sauce
-1/2 tbsp ketjap manis
-
-PROCESS
-Preheat oven to 150°C.
-
-Cut meat into 3–4 large pieces.
-Mix dry rub ingredients and coat meat thoroughly.
-
-Heat oil or butter in a Dutch oven.
-Sear meat on all sides until browned.
-
-Mix stock + vinegar + soy sauce + ketjap.
-Pour into pot with meat.
-
-Cover tightly with lid or foil.
-Cook 3.5–4 hours.
-
-Check tenderness after 3.5 hours.
-If meat falls apart easily, remove from oven.
-If not, cook 30 minutes longer.
-
-Shred meat with two forks.
-Mix shredded meat with some cooking juices.
-
-OUTPUT
-Tender, slow-cooked pulled wild boar with smoky-sweet flavor
-and rich umami notes from soy sauce and ketjap manis.
-
-SERVING SUGGESTION
-Serve in homemade pita bread with fresh vegetables.
-    </pre>
-  </div>
-
-  <!-- IMAGE UNDER THE CARD -->
-  <div class="flex justify-center mt-12">
-    <img 
-      src="/images/recipe-photos/pulled-vildsvin.jpeg" 
-      alt="Pulled Wild Boar" 
-      class="rounded-xl shadow-lg max-w-xl w-full"
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img
+      src="/images/site/logoindex4.jpg"
+      alt="Kristy's Cooking Adventures"
+      class="max-w-3xl w-full h-auto"
     />
-  </div>
+  </header>
+  
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li>
+        <a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">
+          Home
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">
+          Food
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-16">
 
-</main>
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-10">
+      Pulled Wild Boar (or Pulled Pork)
+    </h1>
 
- 
-  {{> footer }}
+    <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
 
+
+
+        <div class="mb-8 pb-8 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
+
+          <h2 class="text-xl font-bold text-green-700 mb-4 uppercase tracking-wide">
+            Meat
+          </h2>
+
+          <h3 class="text-sm font-semibold text-gray-500 mb-2">Ingredients</h3>
+          <ul class="list-disc list-inside mb-4 space-y-1 text-gray-800">
+            <li>1.5 kg wild boar shoulder or neck (or pork shoulder)</li>
+          </ul>
+
+
+        </div>
+        <div class="mb-8 pb-8 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
+
+          <h2 class="text-xl font-bold text-green-700 mb-4 uppercase tracking-wide">
+            Dry Rub
+          </h2>
+
+          <h3 class="text-sm font-semibold text-gray-500 mb-2">Ingredients</h3>
+          <ul class="list-disc list-inside mb-4 space-y-1 text-gray-800">
+            <li>1 tbsp brown sugar</li>
+            <li>1 tbsp smoked paprika</li>
+            <li>1 tbsp onion powder</li>
+            <li>1 tsp garlic powder</li>
+            <li>1 tsp salt</li>
+            <li>1/2 tsp black pepper</li>
+          </ul>
+
+
+        </div>
+        <div class="mb-8 pb-8 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
+
+          <h2 class="text-xl font-bold text-green-700 mb-4 uppercase tracking-wide">
+            Liquid
+          </h2>
+
+          <h3 class="text-sm font-semibold text-gray-500 mb-2">Ingredients</h3>
+          <ul class="list-disc list-inside mb-4 space-y-1 text-gray-800">
+            <li>150 ml beef stock</li>
+            <li>50 ml natural vinegar</li>
+            <li>1/2 tbsp soy sauce</li>
+            <li>1/2 tbsp ketjap manis</li>
+          </ul>
+
+
+        </div>
+        <div class="mb-8 pb-8 border-b border-gray-100 last:border-b-0 last:mb-0 last:pb-0">
+
+          <h2 class="text-xl font-bold text-green-700 mb-4 uppercase tracking-wide">
+            Process
+          </h2>
+
+
+          <h3 class="text-sm font-semibold text-gray-500 mb-2">Process</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-800">
+            <li>Preheat oven to 150°C.</li>
+            <li>Cut meat into 3–4 large pieces. Mix dry rub ingredients and coat meat thoroughly.</li>
+            <li>Heat oil or butter in a Dutch oven. Sear meat on all sides until browned.</li>
+            <li>Mix stock + vinegar + soy sauce + ketjap. Pour into pot with meat.</li>
+            <li>Cover tightly with lid or foil. Cook 3.5–4 hours.</li>
+            <li>Check tenderness after 3.5 hours. If meat falls apart easily, remove from oven. If not, cook 30 minutes longer.</li>
+            <li>Shred meat with two forks. Mix shredded meat with some cooking juices.</li>
+          </ol>
+
+        </div>
+
+
+      <h3 class="text-md font-bold text-green-700 mb-2">Result</h3>
+      <p class="text-gray-700 mb-4">Tender, slow-cooked pulled wild boar with smoky-sweet flavor and rich umami notes from soy sauce and ketjap manis.</p>
+
+
+      <h3 class="text-md font-bold text-green-700 mb-2">Tip</h3>
+      <p class="text-gray-700 italic">Serve in homemade pita bread with fresh vegetables.</p>
+
+    </div>
+
+    <div class="flex justify-center mt-12">
+      <img
+        src="/images/recipe-photos/pulled-vildsvin.jpeg"
+        alt="Pulled Wild Boar"
+        class="rounded-xl shadow-lg max-w-xl w-full"
+      />
+    </div>
+
+  </main>
+
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 Kristy's Cooking Adventures
+    </p>
+  </footer>
 </body>
 </html>
