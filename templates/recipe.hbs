@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{title}} – Kristy's Cooking Adventures</title>
 
+  {{#if output}}
+  <meta name="description" content="{{output}}" />
+  {{/if}}
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{title}} – Kristy's Cooking Adventures" />
+  {{#if output}}
+  <meta property="og:description" content="{{output}}" />
+  {{/if}}
+  <meta property="og:image" content="https://kristyh89.github.io/Kristys_Cooking_Adventures/images/recipe-photos/{{image}}" />
+  <meta property="og:url" content="https://kristyh89.github.io/Kristys_Cooking_Adventures/recipe/{{slug}}.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{title}} – Kristy's Cooking Adventures" />
+  {{#if output}}
+  <meta name="twitter:description" content="{{output}}" />
+  {{/if}}
+  <meta name="twitter:image" content="https://kristyh89.github.io/Kristys_Cooking_Adventures/images/recipe-photos/{{image}}" />
+
   <script type="module" src="/src/main.js"></script>
   <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
