@@ -3,64 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristy's Cooking Adventures</title>
+  <title>Wild Game – Kristy's Cooking Adventures</title>
 
- <script type="module" src="/src/main.js"></script>
-<link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
-
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
 
 <body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-{{> navbar }}
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img
+      src="/images/site/logoindex4.jpg"
+      alt="Kristy's Cooking Adventures"
+      class="max-w-3xl w-full h-auto"
+    />
+  </header>
+  
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li>
+        <a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">
+          Home
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">
+          Food
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-16">
 
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
+      Wild Game
+    </h1>
 
-<main class="flex-grow max-w-6xl mx-auto px-6 py-16">
+    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+      Rustic, bold and flavorful dishes made with wild game.
+    </p>
 
-  <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
-    Wild Game
-  </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-  <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
-    Rustic, bold and flavorful dishes made with wild game.
-  </p>
+      <a href="/Kristys_Cooking_Adventures/recipe/homemade-kebab-and-pita.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/homemade-kebab-and-pita.jpeg" alt="Homemade Moose Kebab" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Homemade Moose Kebab (Crispy Oven-Baked Kebab Strips)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/pulled-vildsvin.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/pulled-vildsvin.jpeg" alt="Pulled Wild Boar" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Pulled Wild Boar (or Pulled Pork)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/vildsvin-stamppot-wortels.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/vildsvin-stamppot-wortels.jpeg" alt="Wild boar steak with carrot mash" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wild Boar Steak with Carrot Mash, Glazed Carrots &amp; Roasted Pumpkin</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/vildsvinrib-red-cabbage.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/vildsvin-rib-med-rod-kal-och-potatismos.jpeg" alt="Wild boar ribs with red cabbage and mashed potatoes" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Oven-Baked Wild Boar Ribs with Braised Red Cabbage &amp; Mashed Potatoes</h3></div>
+        </div>
+      </a>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    </div>
 
-    <a href="{{route 'recipe/homemade-kebab-and-pita.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/homemade-kebab-and-pita.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Homemade Moose Kebab</h3></div>
-      </div>
-    </a>
+  </main>
 
-    <a href="{{route 'recipe/pulled-vildsvin.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/pulled-vildsvin.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Pulled Wild Boar</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/vildsvin-stamppot-wortels.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/vildsvin-stamppot-wortels.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wild Boar Steak with Carrot Mash</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/vildsvinrib-red-cabbage.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/vildsvin-rib-med-rod-kal-och-potatismos.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wild Boar Ribs with Red Cabbage</h3></div>
-      </div>
-    </a>
-
-  </div>
-</main>
-
-
-
-{{> footer }}
-
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 Kristy's Cooking Adventures
+    </p>
+  </footer>
 </body>
 </html>

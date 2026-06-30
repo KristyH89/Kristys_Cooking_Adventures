@@ -35,13 +35,6 @@ export default defineConfig({
         food: resolve(__dirname, 'food.html'),
         contact: resolve(__dirname, 'contact.html'),
 
-        baking: resolve(__dirname, 'categories/baking-desserts.html'),
-        easy: resolve(__dirname, 'categories/easy.html'),
-        main: resolve(__dirname, 'categories/main-dishes.html'),
-        quick: resolve(__dirname, 'categories/quick-easy.html'),
-        slow: resolve(__dirname, 'categories/slow-special.html'),
-        wild: resolve(__dirname, 'categories/wild-game.html'),
-
         rhubarbCake: resolve(__dirname, 'recipe/rhubarb-cake.html'),
         noodles: resolve(__dirname, 'recipe/noodles.html'),
         GevuldeSpeculaas: resolve(__dirname, 'recipe/Gevulde-speculaas.html'),
@@ -60,6 +53,13 @@ export default defineConfig({
         vildsvinStamppotWortels: resolve(__dirname, 'recipe/vildsvin-stamppot-wortels.html'),
         vildsvinribRedCabbage: resolve(__dirname, 'recipe/vildsvinrib-red-cabbage.html'),
         wrapPizza: resolve(__dirname, 'recipe/wrap-pizza.html'),
+        
+        bakingDesserts: resolve(__dirname, 'categories/baking-desserts.html'),
+        easy: resolve(__dirname, 'categories/easy.html'),
+        mainDishes: resolve(__dirname, 'categories/main-dishes.html'),
+        quickEasy: resolve(__dirname, 'categories/quick-easy.html'),
+        slowSpecial: resolve(__dirname, 'categories/slow-special.html'),
+        wildGame: resolve(__dirname, 'categories/wild-game.html'),
       },
     },
   },

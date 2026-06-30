@@ -3,78 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristy's Cooking Adventures</title>
+  <title>Easy Recipes – Kristy's Cooking Adventures</title>
 
-<script type="module" src="/src/main.js"></script>
-<link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
-
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
 
 <body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-{{> navbar }}
-
-
-<main class="flex-grow max-w-6xl mx-auto px-6 py-16">
-
-  <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
-    Easy Recipes
-  </h1>
-
-  <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
-    Easy-to-make recipes that require little effort, even if they take a bit more time in the oven.
-    As a mom of young children, I don’t always have the energy to cook elaborate meals, 
-    but I still try to serve my kids (semi) healthy and varied dishes. 
-    These recipes are some of the easy, low-effort meals that help me do just that.
-</p>
-
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-     <a href="{{route 'recipe/mediterranean-sweet-potato-salad.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/sweetpotatosalad.jpg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Mediterranean Sweet Potato Salad</h3></div>
-      </div>
-    </a>
-
-      <a href="{{route '/noodles.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/noodles.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Noodles</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/potatogratin.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/potatogratin.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Potatogratin</h3></div>
-      </div>
-    </a>
-
-      <a href="{{route 'recipe/quark-pancakes.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/vanilje-kvarg-pankakor.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Vanilla Quark Pancakes</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/wrap-pizza.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/wrappizza.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wrappizza</h3></div>
-      </div>
-    </a>
-
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img
+      src="/images/site/logoindex4.jpg"
+      alt="Kristy's Cooking Adventures"
+      class="max-w-3xl w-full h-auto"
+    />
+  </header>
   
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li>
+        <a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">
+          Home
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">
+          Food
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-16">
 
-  </div>
-</main>
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
+      Easy Recipes
+    </h1>
 
+    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+      Easy-to-make recipes that require little effort, even if they take a bit more time in the oven. As a mom of young children, I don&#x27;t always have the energy to cook elaborate meals, but I still try to serve my kids (semi) healthy and varied dishes. These recipes are some of the easy, low-effort meals that help me do just that.
+    </p>
 
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
+      <a href="/Kristys_Cooking_Adventures/recipe/noodles.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/noodles.jpeg" alt="Easy quick noodles" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Easy &amp; Quick Noodles</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/mediterranean-sweet-potato-salad.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/sweetpotatosalad.jpg" alt="Roasted Sweet Potato &amp; Chickpea Salad" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Roasted Sweet Potato &amp; Chickpea Salad</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/potatogratin.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/potatogratin.jpeg" alt="Oven-baked potato gratin" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Easy Oven-Baked Potato Gratin</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/quark-pancakes.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/vanilje-kvarg-pankakor.jpeg" alt="Vanilla quark pancakes" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Vanilla Quark Pancakes</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/wrap-pizza.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/wrappizza.jpeg" alt="Wrap pizza" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Easy Wrap Pizza</h3></div>
+        </div>
+      </a>
 
-{{> footer }}
+    </div>
 
+  </main>
+
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 Kristy's Cooking Adventures
+    </p>
+  </footer>
 </body>
 </html>

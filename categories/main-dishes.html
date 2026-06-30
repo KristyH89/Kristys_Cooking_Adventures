@@ -3,98 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristy's Cooking Adventures</title>
+  <title>Main Dishes – Kristy's Cooking Adventures</title>
 
-<script type="module" src="/src/main.js"></script>
-<link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
-
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
 
 <body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-{{> navbar }}
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img
+      src="/images/site/logoindex4.jpg"
+      alt="Kristy's Cooking Adventures"
+      class="max-w-3xl w-full h-auto"
+    />
+  </header>
+  
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li>
+        <a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">
+          Home
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">
+          Food
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-16">
 
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
+      Main Dishes
+    </h1>
 
-<main class="flex-grow max-w-6xl mx-auto px-6 py-16">
+    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+      Hearty meals, comforting classics and flavorful dishes.
+    </p>
 
-  <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
-    Main Dishes
-  </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-  <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
-    Hearty meals, comforting classics and flavorful dishes.
-  </p>
+      <a href="/Kristys_Cooking_Adventures/recipe/noodles.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/noodles.jpeg" alt="Easy quick noodles" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Easy &amp; Quick Noodles</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/healthier-mac-and-cheese.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/more-healthier-mac-and-cheese.jpeg" alt="Healthier Mac and Cheese" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Healthier Mac and Cheese</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/homemade-kebab-and-pita.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/homemade-kebab-and-pita.jpeg" alt="Homemade Moose Kebab" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Homemade Moose Kebab (Crispy Oven-Baked Kebab Strips)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/homemade-quarkpizza.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/homemade-pizza.jpeg" alt="Quark pizza dough" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Quark Pizza Dough (High-Protein 2-Ingredient Dough)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/mediterranean-sweet-potato-salad.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/sweetpotatosalad.jpg" alt="Roasted Sweet Potato &amp; Chickpea Salad" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Roasted Sweet Potato &amp; Chickpea Salad</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/pasta-carbonara.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/pasta-carbonara-kantarel.jpeg" alt="Spaghetti Carbonara" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Spaghetti Carbonara</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/patrch.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/patrch.jpeg" alt="Patrch (Arabic Grilled Eggplant &amp; Spiced Minced Meat Dish)" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Patrch (Arabic Grilled Eggplant &amp; Spiced Minced Meat Dish)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/vildsvin-stamppot-wortels.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/vildsvin-stamppot-wortels.jpeg" alt="Wild boar steak with carrot mash" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wild Boar Steak with Carrot Mash, Glazed Carrots &amp; Roasted Pumpkin</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/vildsvinrib-red-cabbage.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/vildsvin-rib-med-rod-kal-och-potatismos.jpeg" alt="Wild boar ribs with red cabbage and mashed potatoes" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Oven-Baked Wild Boar Ribs with Braised Red Cabbage &amp; Mashed Potatoes</h3></div>
+        </div>
+      </a>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    </div>
 
-    <a href="{{route 'recipe/healthier-mac-and-cheese.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/more-healthier-mac-and-cheese.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Healthier Mac and Cheese</h3></div>
-      </div>
-    </a>
+  </main>
 
-      <a href=".{{route 'recipe/mediterranean-sweet-potato-salad.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/sweetpotatosalad.jpg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Mediterranean Sweet Potato Salad</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/pasta-carbonara.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/pasta-carbonara-kantarel.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Traditional Egg-Yolk Carbonara</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/patrch.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/patrch.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Patrch (Arabic Eggplant & Meat)</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/homemade-kebab-and-pita.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/homemade-kebab-and-pita.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Homemade Moose Kebab</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/homemade-quarkpizza.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/homemade-pizza.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Homemade Quark Pizza Dough</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/vildsvinrib-red-cabbage.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/vildsvin-rib-med-rod-kal-och-potatismos.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wild Boar Ribs with Red Cabbage</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/vildsvin-stamppot-wortels.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/vildsvin-stamppot-wortels.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Wild Boar Steak with Carrot Mash</h3></div>
-      </div>
-    </a>
-
-    <a href="{{route 'recipe/pulled-vildsvin.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/pulled-vildsvin.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Pulled Wild Boar</h3></div>
-      </div>
-    </a>
-
-  </div>
-</main>
-
-
-{{> footer }}
-
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 Kristy's Cooking Adventures
+    </p>
+  </footer>
 </body>
 </html>

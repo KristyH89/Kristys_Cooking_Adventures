@@ -3,76 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristy's Cooking Adventures</title>
-<script type="module" src="/src/main.js"></script>
-<link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
+  <title>Baking &amp; Desserts – Kristy's Cooking Adventures</title>
 
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
 
 <body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-{{> navbar }}
+  <header class="w-full bg-white py-6 flex justify-center">
+    <img
+      src="/images/site/logoindex4.jpg"
+      alt="Kristy's Cooking Adventures"
+      class="max-w-3xl w-full h-auto"
+    />
+  </header>
+  
+  <nav class="w-full bg-[rgba(54,151,111,0.6)] py-4 shadow-md">
+    <ul class="flex justify-center gap-10 text-white font-bold text-lg">
+      <li>
+        <a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">
+          Home
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">
+          Food
+        </a>
+      </li>
+  
+      <li>
+        <a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-16">
 
-<main class="flex-grow max-w-6xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
+      Baking &amp; Desserts
+    </h1>
 
-  <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
-    Baking & Desserts
-  </h1>
+    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+      Sweet treats, classic bakes and festive favorites. Click on a recipe to view the full instructions.
+    </p>
 
-  <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
-    Sweet treats, classic bakes and festive favorites.  
-    Click on a recipe to view the full instructions.
-  </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <a href="/Kristys_Cooking_Adventures/recipe/rhubarb-cake.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/rabarbercake.jpeg" alt="Rhubarb cake" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Greek Yogurt Cake with Rhubarb (or Apple Variation)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/Gevulde-speculaas.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/gevulde-speculaas.jpeg" alt="Gevulde Speculaas" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Gevulde Speculaas (Dutch Spiced Almond Pastry)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/kanelbullar.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/kanelbullar.jpeg" alt="Kanelbullar" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Kanelbullar (Swedish Cinnamon Buns)</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/nobake-midsommar-tarta.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/midsommar-tarta-del.jpeg" alt="Midsommar tårta" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">No-Bake Midsommar Tårta</h3></div>
+        </div>
+      </a>
+      <a href="/Kristys_Cooking_Adventures/recipe/tiramisu.html" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/tiramisu.jpeg" alt="Tiramisu" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Tiramisu</h3></div>
+        </div>
+      </a>
 
-<!-- Gevulde Speculaas -->
-   <a href="{{route 'recipe/Gevulde-speculaas.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/gevulde-speculaas.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Gevulde Speculaas (Dutch Spiced Almond Pastry)</h3></div>
-      </div>
-    </a>
+    </div>
 
+  </main>
 
-    <!-- Kanelbullar -->
-    <a href="{{route 'recipe/kanelbullar.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/kanelbullar.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Cinnamon Buns (Kanelbullar)</h3></div>
-      </div>
-    </a>
-
-    <!-- Midsommar tårta -->
-    <a href="{{route 'recipe/nobake-midsommar-tarta.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/midsommar-tarta-del.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">No-Bake Midsommar tårta</h3></div>
-      </div>
-    </a>
-
-    <!-- Rhubarb cake -->
-    <a href="{{route 'recipe/rhubarb-cake.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/rabarbercake.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Rhubarb cake</h3></div>
-      </div>
-    </a>
-
-    <!-- Tiramisu -->
-    <a href="{{route 'recipe/tiramisu.html'}}" class="block group">
-      <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-        <img src="/images/recipe-photos/tiramisu.jpeg" class="w-full h-56 object-cover group-hover:scale-105" />
-        <div class="p-4 text-center"><h3 class="text-lg font-semibold">Tiramisu</h3></div>
-      </div>
-    </a>
-
-  </div>
-</main>
-
-
-
-{{> footer }}
-
+  <footer class="bg-[rgb(54,151,111)] text-white py-6 mt-12">
+    <nav class="mb-3">
+      <ul class="flex justify-center gap-6 text-lg font-medium">
+        <li><a href="/Kristys_Cooking_Adventures/index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/food.html" class="hover:text-green-200">Food</a></li>
+        <li><a href="/Kristys_Cooking_Adventures/contact.html" class="hover:text-green-200">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <p class="text-center text-green-200 text-sm">
+      © 2026 🍴 Kristy's Cooking Adventures
+    </p>
+  </footer>
 </body>
 </html>

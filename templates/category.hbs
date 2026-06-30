@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{categoryTitle}} – Kristy's Cooking Adventures</title>
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
+</head>
+
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+
+  {{> navbar }}
+
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-16">
+
+    <h1 class="text-4xl font-bold text-green-700 text-center mb-6">
+      {{categoryTitle}}
+    </h1>
+
+    <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+      {{categoryDescription}}
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      {{#each recipes}}
+      <a href="{{route (concat 'recipe/' this.slug '.html')}}" class="block group">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/images/recipe-photos/{{this.image}}" alt="{{this.imageAlt}}" class="w-full h-56 object-cover group-hover:scale-105" />
+          <div class="p-4 text-center"><h3 class="text-lg font-semibold">{{this.title}}</h3></div>
+        </div>
+      </a>
+      {{/each}}
+
+    </div>
+
+  </main>
+
+  {{> footer }}
+
+</body>
+</html>

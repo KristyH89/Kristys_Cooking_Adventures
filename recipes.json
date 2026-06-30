@@ -4,6 +4,9 @@
     "title": "Greek Yogurt Cake with Rhubarb (or Apple Variation)",
     "image": "rabarbercake.jpeg",
     "imageAlt": "Rhubarb cake",
+    "category": [
+      "baking-desserts"
+    ],
     "ingredients": [
       "250 g Greek yogurt",
       "75 g olive oil",
@@ -19,7 +22,9 @@
     ],
     "optional": {
       "label": "OPTIONAL APPLE VARIATION",
-      "items": ["1–2 apples, peeled and sliced"]
+      "items": [
+        "1–2 apples, peeled and sliced"
+      ]
     },
     "steps": [
       "Preheat oven to 175°C.",
@@ -37,12 +42,16 @@
     "output": "A moist Greek yogurt cake with tangy rhubarb or sweet apple, lightly caramelized on top and perfect with coffee or tea.",
     "tip": "Swap fruit seasonally: rhubarb in spring, berries in summer, apple/pear with cinnamon in autumn."
   },
-
   {
     "slug": "noodles",
     "title": "Easy & Quick Noodles",
     "image": "noodles.jpeg",
     "imageAlt": "Easy quick noodles",
+    "category": [
+      "easy",
+      "quick-easy",
+      "main-dishes"
+    ],
     "ingredients": [
       "Frozen meatballs (or any preferred protein: scrambled egg, fried egg, boiled egg)",
       "500 g mixed frozen vegetables (for 2 people)",
@@ -64,16 +73,20 @@
     ],
     "optional": {
       "label": "OPTIONAL",
-      "items": ["Top with sesame seeds for extra flavor and texture."]
+      "items": [
+        "Top with sesame seeds for extra flavor and texture."
+      ]
     },
     "output": "A fast, flexible noodle dish packed with vegetables and flavor, perfect for busy days and easy to customize with whatever you have at home."
   },
-
   {
     "slug": "Gevulde-speculaas",
     "title": "Gevulde Speculaas (Dutch Spiced Almond Pastry)",
     "image": "gevulde-speculaas.jpeg",
     "imageAlt": "Gevulde Speculaas",
+    "category": [
+      "baking-desserts"
+    ],
     "ingredients": [
       "250 g all-purpose flour",
       "150 g light brown sugar",
@@ -113,12 +126,14 @@
     },
     "output": "Golden-brown spiced pastry with soft almond center. Best sliced when fully cooled."
   },
-
   {
     "slug": "healthier-mac-and-cheese",
     "title": "Healthier Mac and Cheese",
     "image": "more-healthier-mac-and-cheese.jpeg",
     "imageAlt": "Healthier Mac and Cheese",
+    "category": [
+      "main-dishes"
+    ],
     "ingredients": [
       "250 g whole wheat pasta (or regular pasta)",
       "30 g unsalted butter",
@@ -135,7 +150,10 @@
     ],
     "optional": {
       "label": "OPTIONAL",
-      "items": ["Extra grated cheese for topping", "Fresh parsley for garnish"]
+      "items": [
+        "Extra grated cheese for topping",
+        "Fresh parsley for garnish"
+      ]
     },
     "steps": [
       "Bring a large pot of salted water to a boil. Cook pasta according to package instructions. Drain and set aside.",
@@ -151,14 +169,18 @@
     ],
     "output": "Creamy macaroni and cheese packed with vegetables. A healthier comfort-food dish with extra flavor, fiber, and nutrients."
   },
-
   {
     "slug": "homemade-kebab-and-pita",
-    "title": "Homemade Kebab (Crispy Oven-Baked Kebab Strips)",
+    "title": "Homemade Moose Kebab (Crispy Oven-Baked Kebab Strips)",
     "image": "homemade-kebab-and-pita.jpeg",
-    "imageAlt": "Homemade kebab",
+    "imageAlt": "Homemade Moose Kebab",
+    "category": [
+      "main-dishes",
+      "slow-special",
+      "wild-game"
+    ],
     "ingredients": [
-      "500 g minced beef (10–12% fat)",
+      "500 g minced moose meat (or minced beef as an alternative)",
       "1 tbsp paprika powder",
       "1 tbsp onion powder",
       "1 tbsp garlic powder",
@@ -170,7 +192,7 @@
     ],
     "steps": [
       "Preheat oven to 175°C.",
-      "Place minced beef in a bowl. Add all spices. Mix UNTIL fully combined and smooth.",
+      "Place minced moose meat (or beef) in a bowl. Add all spices. Mix UNTIL fully combined and smooth.",
       "Shape mixture INTO a tight, compact loaf. Place loaf on baking tray.",
       "Bake 25 minutes at 175°C. Remove from oven. Let rest 10 minutes.",
       "Slice loaf INTO very thin strips. Increase oven temperature to 225°C.",
@@ -187,12 +209,15 @@
     "output": "Crispy, flavorful homemade kebab strips — perfect for wraps, pita, bowls, or pizza.",
     "tip": "Serve in pita or flatbread with: salad, tomatoes, cucumber, onion, garlic sauce, kebab sauce, or chili sauce."
   },
-
   {
     "slug": "homemade-quarkpizza",
     "title": "Quark Pizza Dough (High-Protein 2-Ingredient Dough)",
     "image": "homemade-pizza.jpeg",
     "imageAlt": "Quark pizza dough",
+    "category": [
+      "main-dishes",
+      "slow-special"
+    ],
     "ingredients": [
       "250 g quark (kvarg)",
       "250 g flour",
@@ -214,12 +239,14 @@
     },
     "output": "A soft, protein-rich pizza dough made in minutes — no yeast, no rising time, perfect for quick dinners."
   },
-
   {
     "slug": "kanelbullar",
     "title": "Kanelbullar (Swedish Cinnamon Buns)",
     "image": "kanelbullar.jpeg",
     "imageAlt": "Kanelbullar",
+    "category": [
+      "baking-desserts"
+    ],
     "sections": [
       {
         "title": "Dough",
@@ -274,12 +301,15 @@
     ],
     "output": "Soft, fluffy Swedish cinnamon buns with buttery cinnamon filling and a golden, glossy top — perfect with coffee."
   },
-
   {
     "slug": "mediterranean-sweet-potato-salad",
     "title": "Roasted Sweet Potato & Chickpea Salad",
     "image": "sweetpotatosalad.jpg",
     "imageAlt": "Roasted Sweet Potato & Chickpea Salad",
+    "category": [
+      "easy",
+      "main-dishes"
+    ],
     "sections": [
       {
         "title": "Roasted Vegetables",
@@ -337,12 +367,14 @@
     ],
     "output": "A colourful, healthy salad with roasted sweet potatoes, crispy chickpeas, fresh vegetables, creamy feta, and a refreshing yoghurt dressing. Perfect as a light dinner or lunch."
   },
-
   {
     "slug": "nobake-midsommar-tarta",
     "title": "No-Bake Midsommar Tårta",
     "image": "midsommar-tarta-del.jpeg",
     "imageAlt": "Midsommar tårta",
+    "category": [
+      "baking-desserts"
+    ],
     "ingredients": [
       "300 g cream cheese (Philadelphia)",
       "300 g cold heavy cream",
@@ -373,12 +405,14 @@
     ],
     "output": "A soft, layered no-bake cookie cake with a creamy texture and milk-softened cookie layers."
   },
-
   {
     "slug": "pasta-carbonara",
     "title": "Spaghetti Carbonara",
     "image": "pasta-carbonara-kantarel.jpeg",
     "imageAlt": "Spaghetti Carbonara",
+    "category": [
+      "main-dishes"
+    ],
     "ingredients": [
       "350 g spaghetti",
       "150 g pancetta or guanciale, diced",
@@ -397,12 +431,14 @@
     ],
     "output": "A rich, creamy carbonara made without cream — just eggs, cheese, pasta water, and crispy pancetta."
   },
-
   {
     "slug": "patrch",
     "title": "Patrch (Arabic Grilled Eggplant & Spiced Minced Meat Dish)",
     "image": "patrch.jpeg",
     "imageAlt": "Patrch (Arabic Grilled Eggplant & Spiced Minced Meat Dish)",
+    "category": [
+      "main-dishes"
+    ],
     "sections": [
       {
         "title": "Eggplant Base",
@@ -452,12 +488,14 @@
     ],
     "output": "A smoky, creamy Arabic-style dish with grilled aubergine, spiced meat, tahini-yogurt cream, and crunchy almonds."
   },
-
   {
     "slug": "potatogratin",
     "title": "Easy Oven-Baked Potato Gratin",
     "image": "potatogratin.jpeg",
     "imageAlt": "Oven-baked potato gratin",
+    "category": [
+      "easy"
+    ],
     "ingredients": [
       "~800 g ready-made potato gratin (serves 2)",
       "150 g bacon pieces (or any preferred substitute)",
@@ -475,16 +513,21 @@
     ],
     "output": "A simple, comforting oven dish that requires almost no effort — just layer everything in a dish and let the oven do the work."
   },
-
   {
     "slug": "pulled-vildsvin",
     "title": "Pulled Wild Boar (or Pulled Pork)",
     "image": "pulled-vildsvin.jpeg",
     "imageAlt": "Pulled Wild Boar",
+    "category": [
+      "slow-special",
+      "wild-game"
+    ],
     "sections": [
       {
         "title": "Meat",
-        "ingredients": ["1.5 kg wild boar shoulder or neck (or pork shoulder)"]
+        "ingredients": [
+          "1.5 kg wild boar shoulder or neck (or pork shoulder)"
+        ]
       },
       {
         "title": "Dry Rub",
@@ -522,12 +565,15 @@
     "output": "Tender, slow-cooked pulled wild boar with smoky-sweet flavor and rich umami notes from soy sauce and ketjap manis.",
     "tip": "Serve in homemade pita bread with fresh vegetables."
   },
-
   {
     "slug": "quark-pancakes",
     "title": "Vanilla Quark Pancakes",
     "image": "vanilje-kvarg-pankakor.jpeg",
     "imageAlt": "Vanilla quark pancakes",
+    "category": [
+      "easy",
+      "quick-easy"
+    ],
     "ingredients": [
       "200 g (vanilla) quark",
       "50 g flour",
@@ -536,7 +582,11 @@
     ],
     "optional": {
       "label": "OPTIONAL TOPPING",
-      "items": ["1–2 apples, sliced", "1 tsp cinnamon", "Butter for frying"]
+      "items": [
+        "1–2 apples, sliced",
+        "1 tsp cinnamon",
+        "Butter for frying"
+      ]
     },
     "steps": [
       "Place quark, flour, and eggs in a bowl. Whisk UNTIL smooth and lump-free.",
@@ -546,12 +596,14 @@
     ],
     "output": "Light and fluffy vanilla quark pancakes with warm cinnamon apples."
   },
-
   {
     "slug": "tiramisu",
     "title": "Tiramisu",
     "image": "tiramisu.jpeg",
     "imageAlt": "Tiramisu",
+    "category": [
+      "baking-desserts"
+    ],
     "ingredients": [
       "1 container mascarpone",
       "1 container heavy cream",
@@ -585,12 +637,16 @@
     },
     "output": "Chilled, layered tiramisu ready to serve."
   },
-
   {
     "slug": "vildsvin-stamppot-wortels",
     "title": "Wild Boar Steak with Carrot Mash, Glazed Carrots & Roasted Pumpkin",
     "image": "vildsvin-stamppot-wortels.jpeg",
     "imageAlt": "Wild boar steak with carrot mash",
+    "category": [
+      "main-dishes",
+      "slow-special",
+      "wild-game"
+    ],
     "sections": [
       {
         "title": "Carrot Mash",
@@ -667,16 +723,22 @@
     ],
     "output": "A comforting autumn meal with tender wild boar steak, creamy carrot mash, sweet glazed carrots, and crispy roasted pumpkin."
   },
-
   {
     "slug": "vildsvinrib-red-cabbage",
     "title": "Oven-Baked Wild Boar Ribs with Braised Red Cabbage & Mashed Potatoes",
     "image": "vildsvin-rib-med-rod-kal-och-potatismos.jpeg",
     "imageAlt": "Wild boar ribs with red cabbage and mashed potatoes",
+    "category": [
+      "main-dishes",
+      "slow-special",
+      "wild-game"
+    ],
     "sections": [
       {
         "title": "Wild Boar Ribs",
-        "ingredients": ["1 rack wild boar ribs (or pork ribs)"]
+        "ingredients": [
+          "1 rack wild boar ribs (or pork ribs)"
+        ]
       },
       {
         "title": "Dry Rub",
@@ -757,12 +819,15 @@
     ],
     "output": "Tender glazed wild boar ribs with sweet braised red cabbage and creamy mashed potatoes."
   },
-
   {
     "slug": "wrap-pizza",
     "title": "Easy Wrap Pizza",
     "image": "wrappizza.jpeg",
     "imageAlt": "Wrap pizza",
+    "category": [
+      "easy",
+      "quick-easy"
+    ],
     "ingredients": [
       "1 large tortilla wrap",
       "1 tbsp ketchup",
