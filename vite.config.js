@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import handlebars from 'vite-plugin-handlebars'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { resolve } from 'path'
 
 const base = '/Kristys_Cooking_Adventures/'
@@ -14,21 +15,24 @@ export default defineConfig({
 
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
-
-      context: {
-        base
-      },
-
+      context: { base },
       helpers: {
         route: (path) => `${base}${path}`
       }
+    }),
+
+    ViteImageOptimizer({
+      includePublic: true,
+      jpeg: { quality: 80 },
+      jpg: { quality: 80 },
+      png: { quality: 80 },
+      webp: { lossless: false, quality: 80 },
     }),
   ],
 
   build: {
     outDir: 'docs',
     emptyOutDir: true,
-
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'index.html'),
@@ -53,7 +57,7 @@ export default defineConfig({
         vildsvinStamppotWortels: resolve(__dirname, 'recipe/vildsvin-stamppot-wortels.html'),
         vildsvinribRedCabbage: resolve(__dirname, 'recipe/vildsvinrib-red-cabbage.html'),
         wrapPizza: resolve(__dirname, 'recipe/wrap-pizza.html'),
-        
+
         bakingDesserts: resolve(__dirname, 'categories/baking-desserts.html'),
         easy: resolve(__dirname, 'categories/easy.html'),
         mainDishes: resolve(__dirname, 'categories/main-dishes.html'),

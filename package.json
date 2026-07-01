@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-"scripts": {
+  "scripts": {
     "generate": "node scripts/generate-recipes.js",
     "dev": "vite",
     "build": "node scripts/generate-recipes.js && vite build",
@@ -11,12 +11,14 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.1",
+    "sharp": "^0.35.2",
+    "svgo": "^4.0.1",
     "tailwindcss": "^4.3.1",
     "vite": "^8.0.12",
-    "vite-plugin-handlebars": "^2.0.3"
+    "vite-plugin-handlebars": "^2.0.3",
+    "vite-plugin-image-optimizer": "^2.0.3"
   },
   "dependencies": {
     "handlebars": "^4.7.9"
   }
-
 }
