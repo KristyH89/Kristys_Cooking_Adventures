@@ -1,0 +1,17 @@
+{{!--
+  Sub-navigation for the Digital Adventures pages.
+  Usage: {{> digital-subnav active="examples"}}  (key from DIGITAL_NAV_ITEMS in site.config.js)
+--}}
+<nav class="subnav" aria-label="Digital Adventures">
+  <ul class="subnav__list">
+    {{#each digitalNavItems}}
+    <li>
+      <a
+        href="{{route path}}"
+        class="subnav__link"
+        {{#if (eq key ../active)}}aria-current="page"{{/if}}
+      >{{label}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</nav>

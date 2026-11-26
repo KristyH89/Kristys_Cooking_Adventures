@@ -4,7 +4,7 @@ import handlebars from 'vite-plugin-handlebars'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { resolve } from 'path'
 import { readFileSync } from 'fs'
-import { SITE_URL, NAV_ITEMS } from './site.config.js'
+import { SITE_URL, NAV_ITEMS, DIGITAL_NAV_ITEMS } from './site.config.js'
 
 // The site is only hosted on Vercel, at the root of the domain.
 const base = '/'
@@ -17,11 +17,17 @@ const readJson = (file) => JSON.parse(readFileSync(resolve(__dirname, file), 'ut
 const recipes = readJson('recipes.json')
 const categories = readJson('categories.json')
 
+// Examples for Digital Adventures. Only entries with "public": true are
+// shown, so work can be prepared before permission to publish it is given.
+const digitalExamples = readJson('digital-examples.json').filter((example) => example.public === true)
+
 const pages = {
   index: resolve(__dirname, 'index.html'),
   food: resolve(__dirname, 'food.html'),
   digital: resolve(__dirname, 'digital.html'),
   about: resolve(__dirname, 'about.html'),
+  'digital/examples': resolve(__dirname, 'digital/examples.html'),
+  'digital/what-i-do': resolve(__dirname, 'digital/what-i-do.html'),
   contact: resolve(__dirname, 'contact.html'),
 }
 
@@ -46,6 +52,8 @@ export default defineConfig({
         base,
         siteUrl: SITE_URL,
         navItems: NAV_ITEMS,
+        digitalNavItems: DIGITAL_NAV_ITEMS,
+        digitalExamples,
         // Used on the home page
         latestRecipes: recipes.slice(-3).reverse(),
         recipeCount: recipes.length,
@@ -55,6 +63,8 @@ export default defineConfig({
         route: (path) => `${base}${path}`,
         eq: (a, b) => a === b,
         concat: (...args) => args.slice(0, -1).join(''),
+        // True when a media file is a video (shown with <video> instead of <img>)
+        isVideo: (file) => /\.(mp4|webm)$/i.test(file || ''),
       }
     }),
 

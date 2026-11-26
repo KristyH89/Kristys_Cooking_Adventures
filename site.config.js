@@ -16,3 +16,11 @@ export const NAV_ITEMS = [
   { key: 'about', label: 'About', path: 'about.html' },
   { key: 'contact', label: 'Contact', path: 'contact.html' },
 ];
+
+// Sub-navigation shown on the Digital Adventures pages
+// (partials/digital-subnav.hbs). Same "key" idea as NAV_ITEMS.
+export const DIGITAL_NAV_ITEMS = [
+  { key: 'overview', label: 'Overview', path: 'digital.html' },
+  { key: 'examples', label: 'Examples', path: 'digital/examples.html' },
+  { key: 'what-i-do', label: 'What I do', path: 'digital/what-i-do.html' },
+];
