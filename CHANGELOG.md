@@ -2,6 +2,19 @@
 
 All notable changes to this website are listed here, newest first.
 
+## Unreleased (branch `redesign/digital`)
+
+Phase 5 of the redesign: the structure of Digital Adventures. The texts and examples are still to come.
+
+### Added
+- Pink sub-menu on the Digital pages: Overview, Examples, What I do.
+- `digital/examples.html`, filled from `digital-examples.json` (GIF, image or video per example, with a `public` switch).
+- `digital/what-i-do.html` with five topics and marked placeholders for the text.
+- `partials/fonts.hbs` for the Google Fonts link.
+
+### Changed
+- `digital.html` is now an overview page linking to the two sub-pages.
+
 ## Unreleased (branch `redesign/home`)
 
 Phase 3 of the redesign: the new home page and the contact page.
