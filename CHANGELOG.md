@@ -2,6 +2,19 @@
 
 All notable changes to this website are listed here, newest first.
 
+## Unreleased (branch `redesign/about`)
+
+The About page, with self-made travel maps.
+
+### Added
+- `about.html` with Kristy's text: intro, kitchen and creative cards (green and pink), travels, professional background and a closing with a link to Contact.
+- World map with a dot for every place in `places.json`, and a road trip map of the US West with the route, its stops and sights.
+- `scripts/generate-maps.js`, which draws both maps as inline SVG at build time (d3-geo, Natural Earth data via world-atlas). No map code runs in the browser.
+- A list of all places under the map, for small screens and screen readers.
+
+### Changed
+- `npm run generate` (and so `dev` and `build`) now also draws the maps.
+
 ## Unreleased (branch `redesign/digital`)
 
 Phase 5 of the redesign: the structure of Digital Adventures. The texts and examples are still to come.

@@ -21,6 +21,22 @@ const categories = readJson('categories.json')
 // shown, so work can be prepared before permission to publish it is given.
 const digitalExamples = readJson('digital-examples.json').filter((example) => example.public === true)
 
+// Travel data for the About page. The maps themselves are drawn by
+// scripts/generate-maps.js; here it is grouped for the lists under the maps.
+const travel = readJson('places.json')
+const placesByCountry = []
+for (const place of travel.places) {
+  let group = placesByCountry.find((entry) => entry.country === place.country)
+  if (!group) {
+    group = { country: place.country, places: [] }
+    placesByCountry.push(group)
+  }
+  group.places.push(place.name)
+}
+placesByCountry.sort((a, b) => a.country.localeCompare(b.country))
+// The road trip ends where it started, so list each stop only once.
+const roadTripStops = [...new Set(travel.roadTrip.stops.map((stop) => stop.name))]
+
 const pages = {
   index: resolve(__dirname, 'index.html'),
   food: resolve(__dirname, 'food.html'),
@@ -58,6 +74,11 @@ export default defineConfig({
         latestRecipes: recipes.slice(-3).reverse(),
         recipeCount: recipes.length,
         categoryCount: categories.length,
+        // Used on the About page
+        placesByCountry,
+        placeCount: travel.places.length,
+        countryCount: placesByCountry.length,
+        roadTrip: { title: travel.roadTrip.title, stops: roadTripStops, sights: travel.roadTrip.sights },
       },
       helpers: {
         route: (path) => `${base}${path}`,
