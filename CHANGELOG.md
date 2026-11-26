@@ -2,6 +2,15 @@
 
 All notable changes to this website are listed here, newest first.
 
+## Unreleased (branch `redesign/new-logo`)
+
+New name and logo: Kristy's Creative Adventures.
+
+### Changed
+- Kristy's new logo in the header (`public/images/site/logo-creative-adventures.png`) and as the share image on the home page.
+- Site name in page titles, social media tags and the footer is now "Kristy's Creative Adventures". The web address (Vercel link) is unchanged for now.
+- Home page description now mentions both cooking and digital.
+
 ## Unreleased (branch `redesign/examples`)
 
 The first examples on Digital Adventures.
