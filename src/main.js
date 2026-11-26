@@ -1,10 +1,8 @@
 import './style.css'
 
-import { asset, route } from './utils/path.js';
+import { asset } from './utils/path.js';
 
-console.log('BASE:', import.meta.env.BASE_URL);
-console.log('IMAGE:', asset('images/logoindex4.jpg'));
-console.log('ROUTE:', route('food.html'));
+// Photos shown one after another in the hero slider on the home page.
 
 const heroImages = [
   asset("images/recipe-photos/kanelbullar.jpeg"),
@@ -29,10 +27,6 @@ const heroImages = [
   asset("images/recipe-photos/sweetpotatosalad.jpg"),
   asset("images/recipe-photos/appeltaartontbijt.jpg"),
   asset("images/recipe-photos/burruto.jpg"),
-
-
-
-
 ];
 
 const heroImage = document.getElementById("hero-image");
