@@ -42,10 +42,19 @@ export default defineConfig({
 
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
-      context: { base, siteUrl: SITE_URL, navItems: NAV_ITEMS },
+      context: {
+        base,
+        siteUrl: SITE_URL,
+        navItems: NAV_ITEMS,
+        // Used on the home page
+        latestRecipes: recipes.slice(-3).reverse(),
+        recipeCount: recipes.length,
+        categoryCount: categories.length,
+      },
       helpers: {
         route: (path) => `${base}${path}`,
         eq: (a, b) => a === b,
+        concat: (...args) => args.slice(0, -1).join(''),
       }
     }),
 
