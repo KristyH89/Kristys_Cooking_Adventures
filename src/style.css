@@ -1,5 +1,82 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Colour palette
+   --------------------------------------------------------------------------
+   One accent colour per part of the site, each with a soft background tint
+   and a darker "strong" shade for text and links (the accents themselves
+   are too light for small text on a light background).
+
+   Defined with @theme, so Tailwind also creates utilities for them,
+   for example bg-food-soft, text-digital-strong or border-general.
+   ========================================================================== */
+@theme {
+  /* Cooking Adventures */
+  --color-food: #36976f;
+  --color-food-soft: #e9f7f1;
+  --color-food-strong: #2a7757;
+
+  /* Digital Adventures */
+  --color-digital: #d98fa5;
+  --color-digital-soft: #f9e9ed;
+  --color-digital-strong: #a84e6a;
+
+  /* General pages: home, about, contact */
+  --color-general: #e88742;
+  --color-general-soft: #fff0e3;
+  --color-general-strong: #b5571a;
+
+  /* Neutral base */
+  --color-cream: #fffbf5;
+  --color-ink: #2b2a28;
+}
+
+/* ==========================================================================
+   Page themes
+   --------------------------------------------------------------------------
+   Every page sets data-theme on <body>: "food", "digital" or "general".
+   Shared components (navbar, footer, buttons) only use the --theme-*
+   variables below, so they automatically get the colours of the page
+   they are on.
+
+   The food theme reproduces the original green look exactly.
+   ========================================================================== */
+[data-theme="food"] {
+  --theme-accent: var(--color-food);
+  --theme-soft: var(--color-food-soft);
+  --theme-strong: var(--color-food-strong);
+  --theme-nav-bg: rgb(54 151 111 / 0.6);
+  --theme-nav-text: #ffffff;
+  --theme-nav-hover: #bbf7d0;
+  --theme-footer-bg: var(--color-food);
+  --theme-footer-text: #ffffff;
+  --theme-footer-muted: #bbf7d0;
+}
+
+[data-theme="digital"] {
+  --theme-accent: var(--color-digital);
+  --theme-soft: var(--color-digital-soft);
+  --theme-strong: var(--color-digital-strong);
+  --theme-nav-bg: var(--color-digital);
+  --theme-nav-text: var(--color-ink);
+  --theme-nav-hover: #ffffff;
+  --theme-footer-bg: var(--color-digital);
+  --theme-footer-text: var(--color-ink);
+  --theme-footer-muted: var(--color-ink);
+}
+
+[data-theme="general"] {
+  --theme-accent: var(--color-general);
+  --theme-soft: var(--color-general-soft);
+  --theme-strong: var(--color-general-strong);
+  --theme-nav-bg: var(--color-general);
+  --theme-nav-text: var(--color-ink);
+  --theme-nav-hover: #ffffff;
+  --theme-footer-bg: var(--color-general);
+  --theme-footer-text: var(--color-ink);
+  --theme-footer-muted: var(--color-ink);
+}
+
 .hero-wrapper {
   max-width: 1200px;
   margin: 40px auto;
