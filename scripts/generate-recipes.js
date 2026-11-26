@@ -4,7 +4,11 @@
 // category.hbs templates, and writes the result as separate .html files
 // into recipe/ and categories/.
 // Run this with: npm run generate
-// (then run npm run build, or wire this in automatically before every build)
+// (npm run build and npm run dev already run it automatically first)
+//
+// vite.config.js reads the same JSON files to know which pages to build,
+// so a new recipe only needs an entry in recipes.json and a photo in
+// public/images/recipe-photos/.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -138,16 +142,3 @@ writeFileSync(resolve(ROOT, 'public/robots.txt'), robotsTxt, 'utf-8');
 console.log('Generated public/robots.txt.');
 
 console.log(`Done. Generated ${generatedRecipeFiles.length} recipe page(s) and ${generatedCategoryFiles.length} category page(s).`);
-console.log('Add these entries to your vite.config.js rollupOptions.input:');
-
-// 10. Print the full input list entries needed for vite.config.js
-for (const recipe of recipes) {
-  const key = recipe.slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
-  console.log(`        ${key}: resolve(__dirname, 'recipe/${recipe.slug}.html'),`);
-}
-for (const category of categories) {
-  const key = category.slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
-  console.log(`        ${key}: resolve(__dirname, 'categories/${category.slug}.html'),`);
-}
-
-
