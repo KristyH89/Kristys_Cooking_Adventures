@@ -29,6 +29,10 @@
   /* Neutral base */
   --color-cream: #fffbf5;
   --color-ink: #2b2a28;
+
+  /* Pixel accent font for small labels (loaded from Google Fonts in the
+     page head). Falls back to a monospace font. */
+  --font-pixel: "Pixelify Sans", ui-monospace, monospace;
 }
 
 /* ==========================================================================
@@ -77,65 +81,6 @@
   --theme-footer-muted: var(--color-ink);
 }
 
-.hero-wrapper {
-  max-width: 1200px;
-  margin: 40px auto;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-image {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade-in {
-  opacity: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-
-  text-align: center;
-  color: white;
-  padding: 2rem;
-}
-
-.hero-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-text {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  margin-bottom: 2rem;
-}
-
-.hero-button {
-  background: rgb(54, 151, 111);
-  padding: 0.9rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.hero-button:hover {
-  background: rgb(41, 125, 90);
-}
 /* ==========================================================================
    Navigation (partials/navbar.hbs)
    ========================================================================== */
@@ -262,4 +207,161 @@
   text-align: center;
   font-size: 0.875rem;
   color: var(--theme-footer-muted);
+}
+
+/* ==========================================================================
+   Shared small components
+   ========================================================================== */
+
+/* Small retro label above headings, a nod to the pixel-style logo. */
+.pixel-label {
+  font-family: var(--font-pixel);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Recipe card used on the home page */
+.recipe-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 10px 25px -12px rgb(0 0 0 / 0.25);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.recipe-card:hover,
+.recipe-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px -14px rgb(0 0 0 / 0.3);
+}
+
+/* ==========================================================================
+   Home page (index.html)
+   ========================================================================== */
+.home-intro {
+  background: var(--color-general-soft);
+  padding: 4rem 0 6rem;
+  /* Subtle pixel grid in the corner, echoing the logo */
+  background-image:
+    radial-gradient(color-mix(in srgb, var(--color-general) 35%, transparent) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  background-position: right -6px top -6px;
+  background-repeat: repeat;
+}
+
+@media (min-width: 768px) {
+  .home-intro {
+    padding: 5rem 0 7rem;
+  }
+}
+
+/* The two "doors": Cooking and Digital, side by side and equal in size.
+   On wide screens the second one is shifted down a little, so the layout
+   feels less like a standard grid. */
+.doors {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .doors {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .door--offset {
+    margin-top: 3rem;
+  }
+}
+
+.door {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  border-top: 6px solid var(--theme-accent);
+  box-shadow: 0 20px 40px -20px rgb(0 0 0 / 0.3);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.door:hover,
+.door:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 48px -22px rgb(0 0 0 / 0.35);
+}
+
+.door__media {
+  aspect-ratio: 16 / 10;
+  background: var(--theme-soft);
+  overflow: hidden;
+}
+
+/* Photo in the Cooking door; src/main.js fades it in and out. */
+.door__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.door__image.fade-in {
+  opacity: 1;
+}
+
+/* Digital door: a pattern of small "pixels" instead of a photo
+   (there are no project images yet). The SVG uses the digital pink. */
+.door__media--pattern {
+  background-color: var(--theme-soft);
+  background-image: url("/images/site/pixel-pattern.svg");
+  background-size: 240px 200px;
+}
+
+.door__body {
+  padding: 1.75rem;
+}
+
+.door__label {
+  color: var(--theme-strong);
+  margin-bottom: 0.5rem;
+}
+
+.door__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.door__text {
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.door__cta {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--theme-strong);
+  border-bottom: 2px solid var(--theme-accent);
+  padding-bottom: 2px;
+}
+
+/* Respect visitors who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .door,
+  .recipe-card,
+  .door__image,
+  .recipe-card img {
+    transition: none;
+  }
+
+  .door:hover,
+  .recipe-card:hover {
+    transform: none;
+  }
 }

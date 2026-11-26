@@ -20,108 +20,146 @@
 
   <script type="module" src="/src/main.js"></script>
   <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
+
+  <!-- Pixel accent font (small labels only), a nod to the pixel-style logo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet" />
   <meta name="google-site-verification" content="hjBpD-FqKvC7_p1dVqVAlUMxSqe2l-EMPnGIUoj2QLs" />
 </head>
 
-<body data-theme="general" class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+<body data-theme="general" class="bg-cream text-ink font-sans flex flex-col min-h-screen">
 
 {{> navbar active="home"}}
 
 <main class="flex-grow">
 
-<!-- MAIN CONTENT -->
-<section class="w-full bg-[#e9f7f1] py-16">
-  <div class="max-w-3xl mx-auto text-center px-6">
+  <!-- ===== INTRO ===== -->
+  <section class="home-intro">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="pixel-label text-general-strong mb-4">Hi, welcome!</p>
 
-    <!-- HERO TITLE -->
-    <h1 class="text-4xl font-bold text-green-700 mb-4">
-  Welcome to Kristy’s Cooking Adventures
-</h1>
+      <h1 class="text-4xl md:text-5xl font-bold text-ink mb-6 leading-tight">
+        Welcome to Kristy’s Cooking Adventures
+      </h1>
 
-<p class="text-xl text-green-800 font-medium mb-6">
-  A mix of easy meals, sweet treats, oven dishes, and family favorites.
-</p>
-    
+      <p class="text-lg leading-relaxed max-w-2xl mx-auto">
+        This website combines two of my biggest passions: cooking and the digital world.
+        Here I share my favourite recipes, and soon also my adventures in web design,
+        usability, SEO and creative digital experiments.
+      </p>
+    </div>
+  </section>
 
-    <!-- INTRO TEXT -->
-    <p class="text-lg text-gray-700 leading-relaxed">
-      This website combines two of my biggest passions: cooking and technology. 
-      Here I experiment not only with flavors in the kitchen, but also with layouts, 
-      styling, and structure in web development.
-    </p>
+  <!-- ===== TWO DOORS: COOKING + DIGITAL =====
+       Two equal entry points. Each card sets its own data-theme, so its
+       colours come from the food or digital theme (src/style.css). -->
+  <section class="max-w-6xl mx-auto px-6 -mt-10 md:-mt-14 relative">
+    <div class="doors">
 
-  </div>
-</section>
+      <a href="{{route 'food.html'}}" class="door" data-theme="food">
+        <div class="door__media">
+          <!-- Filled and rotated by the hero slider in src/main.js -->
+          <img id="hero-image" alt="One of my homemade dishes" class="door__image" />
+        </div>
+        <div class="door__body">
+          <p class="pixel-label door__label">01 · Cooking Adventures</p>
+          <h2 class="door__title">Homemade dishes, baking and cooking adventures</h2>
+          <p class="door__text">
+            A mix of easy meals, sweet treats, oven dishes and family favourites.
+            {{recipeCount}} recipes in {{categoryCount}} categories.
+          </p>
+          <span class="door__cta">Explore recipes <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
 
-<section class="hero-wrapper">
-  <a href="food.html" class="block relative">
-    <img
-      id="hero-image"
-      alt="Featured recipe"
-      class="hero-image"
-    />
+      <a href="{{route 'digital.html'}}" class="door door--offset" data-theme="digital">
+        <div class="door__media door__media--pattern" aria-hidden="true"></div>
+        <div class="door__body">
+          <p class="pixel-label door__label">02 · Digital Adventures</p>
+          <h2 class="door__title">Websites, web design and creative digital ideas</h2>
+          <p class="door__text">
+            Usability, WordPress and Elementor, SEO and GEO, and small interactive
+            experiments. This part of the site is being built.
+          </p>
+          <span class="door__cta">Take a look <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
 
-    <div class="hero-overlay">
-      
+    </div>
+  </section>
 
-      <p class="hero-text">
-        Homemade dishes, baking and cooking adventures
+  <!-- ===== LATEST RECIPES =====
+       The three most recently added recipes, taken automatically from the
+       end of recipes.json (see vite.config.js). -->
+  <section class="max-w-6xl mx-auto px-6 mt-24" data-theme="food">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+      <div>
+        <p class="pixel-label text-food-strong mb-2">Fresh from the kitchen</p>
+        <h2 class="text-3xl font-bold text-ink">Latest recipes</h2>
+      </div>
+      <a href="{{route 'food.html'}}" class="font-semibold text-food-strong hover:underline">
+        All recipes <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{#each latestRecipes}}
+      <a href="{{route (concat 'recipe/' slug '.html')}}" class="recipe-card group">
+        <div class="overflow-hidden">
+          <img src="/images/recipe-photos/{{image}}" alt="{{imageAlt}}"
+               class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+        </div>
+        <h3 class="p-4 text-lg font-semibold">{{title}}</h3>
+      </a>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- ===== ICE CREAM STEPS ===== -->
+  <section class="w-full bg-general-soft py-16 mt-24">
+    <div class="max-w-4xl mx-auto text-center px-6">
+
+      <h2 class="text-3xl font-bold text-ink mb-4">From Ingredients to Happiness</h2>
+
+      <p class="leading-relaxed mb-10 max-w-2xl mx-auto">
+        Just like learning HTML and CSS, making homemade ice cream takes time.<br>
+        First, you prepare the waffles. Then you make the ice cream.<br>
+        Step by step, layer by layer, until everything comes together.<br>
+        The process may take patience, but the result is worth it.
       </p>
 
-      <span class="hero-button">
-        Explore Recipes
-      </span>
-    </div>
-  </a>
-</section>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-10">
 
+        <div class="text-center">
+          <img src="/images/recipe-photos/homemade-cones.jpeg"
+               class="w-[220px] rounded-lg shadow-md mx-auto"
+               alt="Homemade waffles" loading="lazy">
+          <p class="mt-2 font-medium">Step 1: Baking the waffles</p>
+        </div>
 
+        <div class="text-center">
+          <img src="/images/recipe-photos/icecream-made-in-snow.jpeg"
+               class="w-[220px] rounded-lg shadow-md mx-auto"
+               alt="Homemade ice cream" loading="lazy">
+          <p class="mt-2 font-medium">Step 2: Making the ice cream</p>
+        </div>
 
-  <!-- ICE CREAM STEPS (compact, professioneel, modern) -->
-  <section class="w-full bg-[#e9f7f1] py-16 mt-20">
-  <div class="max-w-4xl mx-auto text-center px-6">
+        <div class="text-center">
+          <img src="/images/recipe-photos/icecream-in-cone2.jpeg"
+               class="w-[220px] rounded-lg shadow-md mx-auto"
+               alt="Final result" loading="lazy">
+          <p class="mt-2 font-medium">Step 3: The final output</p>
+        </div>
 
-    <h2 class="text-3xl font-bold text-green-700 mb-4">From Ingredients to Happiness</h2>
-
-    <p class="text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto">
-      Just like learning HTML and CSS, making homemade ice cream takes time.<br>
-      First, you prepare the waffles. Then you make the ice cream.<br>
-      Step by step, layer by layer, until everything comes together.<br>
-      The process may take patience, but the result is worth it.
-    </p>
-
-    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
-
-      <div class="text-center">
-        <img src="/images/recipe-photos/homemade-cones.jpeg"
-             class="w-[220px] rounded-lg shadow-md mx-auto"
-             alt="Homemade waffles">
-        <p class="mt-2 font-medium text-gray-700">Step 1: Baking the waffles</p>
-      </div>
-
-      <div class="text-center">
-        <img src="/images/recipe-photos/icecream-made-in-snow.jpeg"
-             class="w-[220px] rounded-lg shadow-md mx-auto"
-             alt="Homemade ice cream">
-        <p class="mt-2 font-medium text-gray-700">Step 2: Making the ice cream</p>
-      </div>
-
-      <div class="text-center">
-        <img src="/images/recipe-photos/icecream-in-cone2.jpeg"
-             class="w-[220px] rounded-lg shadow-md mx-auto"
-             alt="Final result">
-        <p class="mt-2 font-medium text-gray-700">Step 3: The final output</p>
       </div>
 
     </div>
-
-  </div>
-</section>
-
+  </section>
 
 </main>
 
- {{> footer }}
+{{> footer }}
 
 </body>
 </html>
