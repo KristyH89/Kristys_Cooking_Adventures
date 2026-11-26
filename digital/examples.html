@@ -36,6 +36,39 @@
     </div>
   </section>
 
+  <!-- Live demo: drawing to photo. The portrait starts as a technical
+       drawing; on hover a pink line sweeps across and wipes the drawing away
+       to reveal the photo. On touch screens the same happens while you
+       scroll (and back again when you scroll up).
+       Styles: .reveal in src/style.css, fallback script: src/drawing-reveal.js -->
+  <section class="max-w-6xl mx-auto px-6 mt-14" aria-labelledby="reveal-title">
+    <div class="reveal-demo">
+      <div>
+        <p class="pixel-label text-digital-strong mb-3">Live demo</p>
+        <h2 id="reveal-title" class="text-2xl md:text-3xl font-bold mb-3">From drawing to photo</h2>
+        <!-- TODO (Kristy): Claude's draft, rewrite if you like. -->
+        <p class="leading-relaxed mb-3">
+          A portrait that starts as a technical drawing. Move your mouse over it and a thin line
+          sweeps across, wiping the drawing away to reveal the photo underneath.
+        </p>
+        <p class="leading-relaxed">
+          On a phone there is no mouse, so the same thing happens while you scroll: down to see the
+          photo, back up to bring the drawing back.
+        </p>
+      </div>
+
+      <figure class="reveal" tabindex="0">
+        <div class="reveal__frame">
+          <img class="reveal__photo" src="/images/digital/kristy-photo.webp"
+               alt="Portrait photo of Kristy" width="900" height="969" loading="lazy" />
+          <div class="reveal__drawing">
+            <img src="/images/digital/kristy-blueprint.webp" alt="" width="900" height="969" loading="lazy" />
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
   <!-- The cards below are generated from digital-examples.json.
        See "Adding a digital example" in README.md. -->
   <section class="max-w-6xl mx-auto px-6 mt-14">

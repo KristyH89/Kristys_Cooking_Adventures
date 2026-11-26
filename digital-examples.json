@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "title": "A timeline that fills in as you scroll",
+    "type": "Effect",
+    "description": "The line of the timeline grows downwards while you scroll, and every year lights up as soon as you pass it.",
+    "media": "scroll-timeline.mp4",
+    "mediaAlt": "A vertical timeline with years from 1997 to 2026; the green line grows and the dots fill in while scrolling",
+    "tags": [
+      "WordPress",
+      "Elementor",
+      "CSS",
+      "JavaScript"
+    ],
+    "public": true
+  }
+]

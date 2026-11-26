@@ -2,6 +2,14 @@
 
 All notable changes to this website are listed here, newest first.
 
+## Unreleased (branch `redesign/examples`)
+
+The first examples on Digital Adventures.
+
+### Added
+- Live demo on `digital/examples.html`: Kristy's portrait starts as a technical drawing; on hover a pink line sweeps across and reveals the photo. On touch screens it follows the scroll position (scroll-driven animation, with `src/drawing-reveal.js` as fallback).
+- Effect clip in `digital-examples.json`: a timeline that fills in while scrolling.
+
 ## Unreleased (branch `redesign/about`)
 
 The About page, with self-made travel maps.
