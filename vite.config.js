@@ -20,6 +20,8 @@ const categories = readJson('categories.json')
 const pages = {
   index: resolve(__dirname, 'index.html'),
   food: resolve(__dirname, 'food.html'),
+  digital: resolve(__dirname, 'digital.html'),
+  about: resolve(__dirname, 'about.html'),
   contact: resolve(__dirname, 'contact.html'),
 }
 
