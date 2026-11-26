@@ -92,7 +92,7 @@ The site has three parts, each with its own colour:
 | Theme | Used on | Accent | Soft background | Text shade |
 |---|---|---|---|---|
 | `food` | Food, categories, recipes | `#36976F` | `#E9F7F1` | `#2A7757` |
-| `digital` | Digital Adventures | `#D98FA5` | `#F9E9ED` | `#A84E6A` |
+| `digital` | Digital Adventures | `#E57A9C` | `#F9E9ED` | `#A84E6A` |
 | `general` | Home, About, Contact | `#E88742` | `#FFF0E3` | `#B5571A` |
 
 Plus a cream base (`#FFFBF5`) and ink for text (`#2B2A28`).
