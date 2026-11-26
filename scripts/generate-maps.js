@@ -78,8 +78,7 @@ function pin(projection, place, className, extraLabel = '', radius = 5) {
   const [x, y] = projection([place.lon, place.lat]);
   const label = escape(extraLabel ? `${place.name}, ${extraLabel}` : place.name);
   return `
-  <g class="${className}" tabindex="0" role="img" aria-label="${label}" transform="translate(${round(x)} ${round(y)})">
-    <title>${label}</title>
+  <g class="${className}" tabindex="0" role="button" aria-label="${label}" data-label="${label}" transform="translate(${round(x)} ${round(y)})">
     <circle class="map__pin-halo" r="${radius * 2.2}" />
     <circle r="${radius}" />
   </g>`;
@@ -133,7 +132,7 @@ function roadTripMap() {
     (stop, i, list) => list.findIndex((other) => other.name === stop.name) === i
   );
 
-  const stops = uniqueStops.map((stop) => pin(projection, stop, 'map__pin map__pin--stop', 'stop along the route')).join('');
+  const stops = uniqueStops.map((stop) => pin(projection, stop, 'map__pin map__pin--stop')).join('');
 
   // Sights are drawn as small diamonds with a name. "label" in places.json
   // (left, right, above or below; default right) moves a name that would
