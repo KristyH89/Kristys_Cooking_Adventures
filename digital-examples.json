@@ -1,20 +1,16 @@
 [
   {
-    "title": "A line that shows how far you've scrolled",
-    "type": "Effect",
-    "description": "A thin green line under the header grows while you scroll down the page, so you always see how much is left to read. It is full when you reach the bottom.",
-    "media": "scroll-progress-line.mp4",
-    "mediaAlt": "A website scrolls down while a thin green line under the header grows from left to right",
-    "tags": ["WordPress", "Elementor", "CSS", "JavaScript"],
-    "public": true
-  },
-  {
     "title": "A timeline that fills in as you scroll",
     "type": "Effect",
     "description": "The line of the timeline grows downwards while you scroll, and every year lights up as soon as you pass it.",
     "media": "scroll-timeline.mp4",
     "mediaAlt": "A vertical timeline with years from 1997 to 2026; the green line grows and the dots fill in while scrolling",
-    "tags": ["WordPress", "Elementor", "CSS", "JavaScript"],
+    "tags": [
+      "WordPress",
+      "Elementor",
+      "CSS",
+      "JavaScript"
+    ],
     "public": true
   }
 ]
