@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me – Kristy's Cooking Adventures</title>
+  <meta name="description" content="Hi, I'm Kristy: Dutch, living in Småland, Sweden. A little about my life, cooking, travels and my way into web design." />
 
-  <!-- Placeholder page: kept out of search results and out of the sitemap
-       until it has real content. Remove this tag (and add the page to
-       staticPages in scripts/generate-recipes.js) when it is finished. -->
+  <!-- Kept out of search results until Kristy has approved the final text.
+       Then remove this tag and add the page to staticPages in
+       scripts/generate-recipes.js. -->
   <meta name="robots" content="noindex" />
 
+  {{> fonts}}
   <script type="module" src="/src/main.js"></script>
   <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
 </head>
@@ -19,14 +21,167 @@
 {{> navbar active="about"}}
 
 <main class="flex-grow">
-  <section class="w-full bg-general-soft py-20">
-    <div class="max-w-3xl mx-auto text-center px-6">
-      <h1 class="text-4xl font-bold text-general-strong mb-6">About Me</h1>
+
+  <!-- Intro -->
+  <section class="home-intro">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="pixel-label text-general-strong mb-3">About me</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Hi! I'm Kristy.</h1>
+      <p class="text-lg leading-relaxed mb-4">
+        I grew up in a small village in the Netherlands, but these days you'll find me in
+        Småland, Sweden, where I live with my husband and our two boys.
+      </p>
+      <p class="text-lg leading-relaxed mb-4">
+        A few years ago, we decided to make a big change. We were looking for more peace, quiet
+        and space, and Sweden had all three. My oldest sister had already been living here for
+        over twenty years, which made Sweden feel a lot less far away and the step a lot less daunting.
+      </p>
       <p class="text-lg leading-relaxed">
-        This page is coming soon.
+        Looking back, I'm incredibly happy with our decision. I love where we live, the contact we
+        have with our neighbours and how quickly we made new friends. I haven't regretted the move
+        for a single second.
       </p>
     </div>
   </section>
+
+  <!-- Kitchen + creative: two cards, Cooking in green, Digital in pink -->
+  <section class="max-w-5xl mx-auto px-6 -mt-12 mb-20">
+    <div class="about-cards">
+      <article class="about-card" data-theme="food">
+        <p class="pixel-label about-card__label">Life in the kitchen</p>
+        <p class="mb-4">
+          One thing you'll definitely notice on this website: I love cooking! Since moving to
+          Sweden, my collection of kitchen gadgets has grown quite a bit, from a food processor to
+          a slow cooker and a bread maker.
+        </p>
+        <p class="mb-6">
+          I enjoy trying new recipes, experimenting with ingredients and finding new ways to make
+          something delicious. I'm not exactly a sports enthusiast, but I do like going for walks
+          and trying to stay active, which helps balance out all that baking.
+        </p>
+        <a href="{{route 'food.html'}}" class="about-card__link">See my recipes →</a>
+      </article>
+
+      <article class="about-card door--offset" data-theme="digital">
+        <p class="pixel-label about-card__label">Creative in my own way</p>
+        <p class="mb-4">
+          I've never been the artistic type when it comes to painting or drawing, but creativity
+          comes in many forms. I've always been interested in computers and in finding clever ways
+          to make things easier. Even as a teenager, I was looking for shortcuts. Why copy and paste
+          with a mouse when you can simply press <kbd>Ctrl</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>V</kbd>?
+        </p>
+        <p class="mb-6">
+          When I was around fifteen, I built my own website with HTML and CSS. That interest has only
+          grown since. These days, I'm especially interested in web design, usability, content
+          management systems and all the little details that make a website work well and look good.
+        </p>
+        <a href="{{route 'digital.html'}}" class="about-card__link">Visit Digital Adventures →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Travel -->
+  <section class="bg-general-soft py-20" aria-labelledby="travel-title">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <p class="pixel-label text-general-strong mb-3">Exploring new places</p>
+        <h2 id="travel-title" class="text-3xl font-bold mb-6">Where I've been</h2>
+        <p class="text-lg leading-relaxed mb-10">
+          I also love to travel. Discovering new surroundings and trying food I've never had before
+          is one of my favourite things to do. On the map below you can see some of the places I've
+          been so far: {{placeCount}} places in {{countryCount}} countries.
+        </p>
+      </div>
+
+      <figure class="map-card">
+        {{> map-world}}
+        <figcaption class="map-card__caption">Hover over a dot to see the place, or open the list below the map.</figcaption>
+      </figure>
+
+      <details class="place-list">
+        <summary>Show all places as a list</summary>
+        <dl class="place-list__grid">
+          {{#each placesByCountry}}
+            <div>
+              <dt>{{country}}</dt>
+              <dd>{{#each places}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</dd>
+            </div>
+          {{/each}}
+        </dl>
+      </details>
+
+      <div class="roadtrip">
+        <div class="roadtrip__text">
+          <p class="pixel-label text-general-strong mb-3">Road trip</p>
+          <h3 class="text-2xl font-bold mb-4">{{roadTrip.title}}</h3>
+          <p class="leading-relaxed mb-6">
+            One of our biggest adventures was a month-long road trip through the United States,
+            from San Francisco to Las Vegas and the Grand Canyon, up to Yellowstone and Glacier,
+            and back down along the coast.
+          </p>
+          <p class="roadtrip__legend">
+            <span class="roadtrip__key roadtrip__key--stop"></span> Overnight stop
+            <span class="roadtrip__key roadtrip__key--sight"></span> Sight along the way
+          </p>
+          <ol class="roadtrip__stops">
+            {{#each roadTrip.stops}}<li>{{this}}</li>{{/each}}
+          </ol>
+        </div>
+        <figure class="map-card map-card--roadtrip">
+          {{> map-roadtrip}}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional background -->
+  <section class="max-w-3xl mx-auto px-6 py-20">
+    <p class="pixel-label text-general-strong mb-3">My professional background</p>
+    <h2 class="text-3xl font-bold mb-6">From social work to web design</h2>
+    <p class="text-lg leading-relaxed mb-4">
+      After studying Social Work in the Netherlands, I worked for around ten years as a Social
+      Support Advisor (in Dutch: Wmo consultant) for Dutch municipalities, helping residents get
+      support under the Dutch Social Support Act.
+    </p>
+    <p class="text-lg leading-relaxed mb-4">
+      I visited people at home to understand their situation and decide whether they were eligible
+      for practical or psychosocial support. It was rewarding work, and I genuinely enjoyed helping
+      people find the support they needed.
+    </p>
+    <p class="text-lg leading-relaxed mb-4">
+      At the same time, I felt more and more drawn to the world of IT. While still in the
+      Netherlands, I took a systems administration course with Centric as a first step towards a
+      career in IT.
+    </p>
+    <p class="text-lg leading-relaxed mb-4">
+      Then life took a different turn, and we moved to Sweden! My career path took an unexpected
+      detour, but my interest in technology and digital creativity never went away. Right now I'm
+      finishing an internship as a web designer and web developer, and I'm looking for a fun new
+      challenge where I can put that interest to work.
+    </p>
+    <p class="text-lg leading-relaxed">
+      You can read more about my digital interests and projects in
+      <a href="{{route 'digital.html'}}" class="font-semibold text-general-strong underline underline-offset-4">Digital Adventures</a>.
+    </p>
+  </section>
+
+  <!-- Closing -->
+  <section class="bg-general-soft py-16">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="pixel-label text-general-strong mb-3">Always curious</p>
+      <p class="text-lg leading-relaxed mb-4">
+        Whether it's a new recipe, a new corner of Sweden or a new idea for a website, I love learning
+        and exploring. That's really what this website is about: a place to share the things I enjoy,
+        the things I make and the adventures along the way.
+      </p>
+      <p class="text-lg leading-relaxed mb-8">Welcome to my little corner of the internet!</p>
+      <a href="{{route 'contact.html'}}"
+         class="inline-block bg-general text-ink font-semibold px-6 py-3 rounded-full hover:bg-general-strong hover:text-white transition">
+        Get in touch
+      </a>
+    </div>
+  </section>
+
 </main>
 
 {{> footer }}
