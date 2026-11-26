@@ -2,6 +2,18 @@
 
 All notable changes to this website are listed here, newest first.
 
+## Unreleased (branch `redesign/home`)
+
+Phase 3 of the redesign: the new home page.
+
+### Added
+- Two equal entry cards on the home page: Cooking Adventures (green, with the photo slider) and Digital Adventures (pink).
+- "Latest recipes" section, filled automatically from the end of `recipes.json`.
+- Pixel accent font (Pixelify Sans) for small labels.
+
+### Changed
+- Home page restyled in the orange (general) theme, with a cream base. The full-stack text is gone; "From Ingredients to Happiness" stays.
+
 ## Unreleased (branch `redesign/theme-and-navigation`)
 
 Phase 2 of the redesign: colour themes and the new menu. Recipe pages and the Food section keep their green look.
