@@ -72,8 +72,10 @@ npm run preview   # serves the built site from dist/
 | Path | What it is |
 |---|---|
 | `index.html`, `food.html`, `digital.html`, `about.html`, `contact.html` | Hand-written pages |
-| `partials/` | Navbar and footer, shared by every page |
+| `partials/` | Navbar, footer, Digital sub-menu and font link, shared by the pages |
 | `recipes.json` | All recipes (the content of every recipe page) |
+| `digital-examples.json` | Examples shown on Digital → Examples |
+| `digital/` | Digital Adventures sub-pages (Examples, What I do) |
 | `categories.json` | All recipe categories |
 | `templates/` | Templates for a recipe page and a category page |
 | `scripts/generate-recipes.js` | Builds `recipe/*.html`, `categories/*.html`, `public/sitemap.xml` and `public/robots.txt` from the JSON files |
@@ -109,6 +111,33 @@ Plus a cream base (`#FFFBF5`) and ink for text (`#2B2A28`).
 - On small screens the menu collapses behind a Menu button (`src/navigation.js`).
 
 ---
+
+## 💻 Adding a digital example
+
+Examples (short clips of effects, details or website projects) appear on `/digital/examples.html`.
+
+1. Put the media file in `public/images/digital/`. A short **MP4 or WebM** is best for effects: it is much smaller than a GIF and plays muted on a loop, just like a GIF. GIF, PNG and JPG also work.
+2. Add an entry to `digital-examples.json`:
+
+```json
+{
+  "title": "Coloured line under the header that follows scrolling",
+  "type": "Effect",
+  "description": "Two sentences about what it does and why.",
+  "media": "scroll-line.mp4",
+  "mediaAlt": "A coloured line under a website header grows while scrolling down",
+  "tags": ["CSS", "JavaScript"],
+  "public": true
+}
+```
+
+- `type`: a short label, for example `Effect`, `Project` or `Experiment`.
+- `public`: only `true` entries are shown. Use `false` to prepare an example while you wait for permission from a company or client.
+- Leave out company names and anything that makes a client recognisable until you have permission.
+
+## ✍️ Writing the Digital texts
+
+Text that still has to be written is marked on the page with a dashed box (`class="placeholder-text"`) and in the code with a `TODO (Kristy)` comment. Search for `TODO (Kristy)` to find them all. When a page is finished, remove its `<meta name="robots" content="noindex" />` and add it to `staticPages` in `scripts/generate-recipes.js`, so it appears in the sitemap.
 
 ## 🍳 Adding a recipe
 

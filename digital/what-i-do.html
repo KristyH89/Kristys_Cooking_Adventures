@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What I do – Digital Adventures – Kristy's Cooking Adventures</title>
+
+  <meta name="description" content="What I work with: websites and CMS, web design and usability, SEO, GEO and creative digital experiments." />
+
+  <!-- Under construction: kept out of search results and out of the sitemap
+       until it has real content. Remove this tag (and add the page to
+       staticPages in scripts/generate-recipes.js) when it is finished. -->
+  <meta name="robots" content="noindex" />
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
+  {{> fonts}}
+</head>
+
+<body data-theme="digital" class="bg-cream text-ink font-sans flex flex-col min-h-screen">
+
+{{> navbar active="digital"}}
+{{> digital-subnav active="what-i-do"}}
+
+<main class="flex-grow">
+
+  <section class="page-intro">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="pixel-label text-digital-strong mb-4">What I do</p>
+      <h1 class="text-4xl font-bold mb-6">Systems, SEO, GEO and usability</h1>
+      <!-- TODO (Kristy): replace with your own introduction. -->
+      <p class="placeholder-text">A short introduction follows soon.</p>
+    </div>
+  </section>
+
+  <!-- One <section class="topic"> per topic. Replace each placeholder-text
+       paragraph with your own text, and add or remove topics as you like. -->
+  <div class="max-w-5xl mx-auto px-6 mt-10">
+
+      <section class="topic">
+        <div>
+          <p class="pixel-label text-digital-strong mb-1">01</p>
+          <h2 class="topic__title">Websites and CMS</h2>
+        </div>
+        <!-- TODO (Kristy): what you do with WordPress, Elementor and other content management systems. -->
+        <p class="placeholder-text">More about this soon.</p>
+      </section>
+
+      <section class="topic">
+        <div>
+          <p class="pixel-label text-digital-strong mb-1">02</p>
+          <h2 class="topic__title">Web design and usability</h2>
+        </div>
+        <!-- TODO (Kristy): how you make websites clear and pleasant to use. -->
+        <p class="placeholder-text">More about this soon.</p>
+      </section>
+
+      <section class="topic">
+        <div>
+          <p class="pixel-label text-digital-strong mb-1">03</p>
+          <h2 class="topic__title">SEO</h2>
+        </div>
+        <!-- TODO (Kristy): how you help websites get found in search engines. -->
+        <p class="placeholder-text">More about this soon.</p>
+      </section>
+
+      <section class="topic">
+        <div>
+          <p class="pixel-label text-digital-strong mb-1">04</p>
+          <h2 class="topic__title">GEO</h2>
+        </div>
+        <!-- TODO (Kristy): what generative engine optimisation is and how you approach it. -->
+        <p class="placeholder-text">More about this soon.</p>
+      </section>
+
+      <section class="topic">
+        <div>
+          <p class="pixel-label text-digital-strong mb-1">05</p>
+          <h2 class="topic__title">Creative digital experiments</h2>
+        </div>
+        <!-- TODO (Kristy): small interactive effects and animations you like to build. -->
+        <p class="placeholder-text">More about this soon.</p>
+      </section>
+
+  </div>
+
+</main>
+
+{{> footer }}
+
+</body>
+</html>

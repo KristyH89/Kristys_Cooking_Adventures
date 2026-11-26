@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples – Digital Adventures – Kristy's Cooking Adventures</title>
+
+  <meta name="description" content="Examples of web design effects, interactive details and website projects." />
+
+  <!-- Under construction: kept out of search results and out of the sitemap
+       until it has real content. Remove this tag (and add the page to
+       staticPages in scripts/generate-recipes.js) when it is finished. -->
+  <meta name="robots" content="noindex" />
+
+  <script type="module" src="/src/main.js"></script>
+  <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
+  {{> fonts}}
+</head>
+
+<body data-theme="digital" class="bg-cream text-ink font-sans flex flex-col min-h-screen">
+
+{{> navbar active="digital"}}
+{{> digital-subnav active="examples"}}
+
+<main class="flex-grow">
+
+  <section class="page-intro">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="pixel-label text-digital-strong mb-4">Examples</p>
+      <h1 class="text-4xl font-bold mb-6">Effects, details and projects</h1>
+      <!-- TODO (Kristy): replace with your own introduction. -->
+      <p class="text-lg leading-relaxed">
+        Not every project needs to be shown as a complete website. Here I show small
+        effects and details I built, and website projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- The cards below are generated from digital-examples.json.
+       See "Adding a digital example" in README.md. -->
+  <section class="max-w-6xl mx-auto px-6 mt-14">
+    {{#if digitalExamples.length}}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{#each digitalExamples}}
+      <article class="example-card">
+        <div class="example-card__media">
+          {{#if (isVideo media)}}
+          <video src="/images/digital/{{media}}" autoplay muted loop playsinline aria-label="{{mediaAlt}}"></video>
+          {{else}}
+          <img src="/images/digital/{{media}}" alt="{{mediaAlt}}" loading="lazy" />
+          {{/if}}
+        </div>
+        <div class="p-6 flex flex-col gap-3">
+          <p class="pixel-label text-digital-strong">{{type}}</p>
+          <h2 class="text-xl font-bold">{{title}}</h2>
+          <p class="leading-relaxed">{{description}}</p>
+          {{#if tags.length}}
+          <ul class="flex flex-wrap gap-2 mt-1">
+            {{#each tags}}<li class="tag">{{this}}</li>{{/each}}
+          </ul>
+          {{/if}}
+        </div>
+      </article>
+      {{/each}}
+    </div>
+    {{else}}
+    <p class="placeholder-text text-center max-w-xl mx-auto">
+      The first examples are on their way.
+    </p>
+    {{/if}}
+  </section>
+
+</main>
+
+{{> footer }}
+
+</body>
+</html>

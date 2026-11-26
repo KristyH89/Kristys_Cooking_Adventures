@@ -365,3 +365,111 @@
     transform: none;
   }
 }
+
+/* ==========================================================================
+   Sub-navigation (partials/digital-subnav.hbs)
+   ========================================================================== */
+.subnav {
+  background: var(--theme-soft);
+  border-bottom: 1px solid color-mix(in srgb, var(--theme-accent) 35%, transparent);
+}
+
+.subnav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.subnav__link {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: var(--theme-strong);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.subnav__link:hover,
+.subnav__link:focus-visible {
+  background: #ffffff;
+}
+
+.subnav__link[aria-current="page"] {
+  background: var(--theme-accent);
+  color: var(--color-ink);
+}
+
+/* ==========================================================================
+   Digital Adventures pages
+   ========================================================================== */
+.page-intro {
+  background: var(--theme-soft);
+  padding: 4rem 0 3.5rem;
+}
+
+/* Card for one example (digital/examples.html) */
+.example-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #ffffff;
+  border-top: 5px solid var(--theme-accent);
+  box-shadow: 0 14px 30px -16px rgb(0 0 0 / 0.3);
+}
+
+.example-card__media {
+  aspect-ratio: 16 / 10;
+  background: var(--theme-soft);
+}
+
+.example-card__media img,
+.example-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--theme-soft);
+  color: var(--theme-strong);
+}
+
+/* Visible marker for text that Kristy still has to write.
+   Search the code for "placeholder-text" to find them all. */
+.placeholder-text {
+  border: 2px dashed color-mix(in srgb, var(--theme-accent) 60%, transparent);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: color-mix(in srgb, var(--color-ink) 70%, transparent);
+  font-style: italic;
+}
+
+/* Numbered topic on the What I do page */
+.topic {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--theme-accent) 30%, transparent);
+}
+
+@media (min-width: 768px) {
+  .topic {
+    grid-template-columns: 14rem 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.topic__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+}

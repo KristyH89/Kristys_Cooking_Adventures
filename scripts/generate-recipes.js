@@ -44,6 +44,7 @@ const navbarSource = readFileSync(resolve(ROOT, 'partials/navbar.hbs'), 'utf-8')
 const footerSource = readFileSync(resolve(ROOT, 'partials/footer.hbs'), 'utf-8');
 Handlebars.registerPartial('navbar', navbarSource);
 Handlebars.registerPartial('footer', footerSource);
+Handlebars.registerPartial('fonts', readFileSync(resolve(ROOT, 'partials/fonts.hbs'), 'utf-8'));
 console.log('Partials registered.');
 
 // 4. Register helpers, same as in vite.config.js, plus a 'concat' helper
