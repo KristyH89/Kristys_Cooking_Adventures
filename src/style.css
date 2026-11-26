@@ -737,19 +737,22 @@ kbd {
 
 @media (min-width: 768px) {
   .reveal-demo {
-    grid-template-columns: 1fr minmax(16rem, 22rem);
+    grid-template-columns: 1fr minmax(14rem, 18rem);
     gap: 4rem;
   }
 }
 
 .reveal {
-  margin: 0;
+  width: 100%;
+  max-width: 18rem;
+  margin: 0 auto;
   outline: none;
 }
 
 .reveal__frame {
   position: relative;
-  aspect-ratio: 4 / 5;
+  /* Same shape as the images, so nothing is cut off */
+  aspect-ratio: 900 / 969;
   overflow: hidden;
   background: #ffffff;
 }
@@ -779,11 +782,11 @@ kbd {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(var(--reveal, 0%) - 4px);
+  left: calc(var(--reveal, 0%) - 10px);
   width: 3px;
   z-index: 2;
   background: var(--color-digital);
-  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--color-digital) 60%, transparent);
+  box-shadow: 0 0 6px 0 color-mix(in srgb, var(--color-digital) 70%, transparent);
   pointer-events: none;
   transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -796,7 +799,7 @@ kbd {
 
   .reveal:hover .reveal__frame::after,
   .reveal:focus-visible .reveal__frame::after {
-    left: calc(100% + 3px);
+    left: calc(100% + 7px);
   }
 }
 
@@ -807,8 +810,8 @@ kbd {
 }
 
 @keyframes reveal-line {
-  from { left: -4px; }
-  to { left: calc(100% + 3px); }
+  from { left: -10px; }
+  to { left: calc(100% + 7px); }
 }
 
 @media (hover: none) {
