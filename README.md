@@ -139,6 +139,23 @@ Examples (short clips of effects, details or website projects) appear on `/digit
 
 Text that still has to be written is marked on the page with a dashed box (`class="placeholder-text"`) and in the code with a `TODO (Kristy)` comment. Search for `TODO (Kristy)` to find them all. When a page is finished, remove its `<meta name="robots" content="noindex" />` and add it to `staticPages` in `scripts/generate-recipes.js`, so it appears in the sitemap.
 
+## 🗺️ Adding a place to the travel map
+
+The maps on the About page are drawn from `places.json` by `scripts/generate-maps.js`
+every time you run `npm run dev` or `npm run build`.
+
+- **New place on the world map:** add a line to `places`, for example
+  `{ "name": "Oslo", "country": "Norway", "lat": 59.91, "lon": 10.75 }`.
+  You can find the latitude and longitude by right-clicking a spot in Google Maps.
+  The map zooms out by itself if the new place is outside the current view, and the list
+  under the map and the country count update automatically.
+- **Road trip:** `roadTrip.stops` are the overnight stops, in driving order (the route line
+  follows this order). `roadTrip.sights` are the places visited along the way. If a sight's
+  name overlaps another, add `"label": "left"` (or `"above"`, `"below"`).
+
+The generated files (`partials/map-world.hbs`, `partials/map-roadtrip.hbs`) are not stored in Git.
+The coastlines come from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
+
 ## 🍳 Adding a recipe
 
 1. Put the photo in `public/images/recipe-photos/`.
