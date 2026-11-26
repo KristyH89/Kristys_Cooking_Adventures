@@ -100,6 +100,7 @@ Plus a cream base (`#FFFBF5`) and ink for text (`#2B2A28`).
 - The colours are defined once in `src/style.css` (`@theme`). Tailwind turns them into classes such as `bg-food-soft`, `text-digital-strong` or `border-general`.
 - Every page sets its theme on the body: `<body data-theme="food">`. The navbar, footer and other shared parts read the matching `--theme-*` variables, so they change colour automatically.
 - Use the "strong" shade for headings and links: orange and pink are too light for small text.
+- Small labels use the pixel font Pixelify Sans (class `pixel-label`), a nod to the logo. It is loaded from Google Fonts in the head of the pages that use it.
 
 ## 🧭 Navigation
 
@@ -116,6 +117,8 @@ Plus a cream base (`#FFFBF5`) and ink for text (`#2B2A28`).
 3. Run `npm run dev` to check it, then commit and push. Vercel builds and publishes it automatically.
 
 A recipe can either have `ingredients` + `steps`, or a `sections` list (for example dough, filling, topping), each with its own `ingredients` and `steps`. Optional fields: `optional`, `storage`, `tip`, `output`. Look at an existing recipe in `recipes.json` for an example of each.
+
+Add new recipes at the end of `recipes.json`: the home page shows the last three entries as "Latest recipes".
 
 Never change the `slug` of an existing recipe: that changes its address and breaks existing links.
 
