@@ -4,7 +4,7 @@ import handlebars from 'vite-plugin-handlebars'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { resolve } from 'path'
 import { readFileSync } from 'fs'
-import { SITE_URL } from './site.config.js'
+import { SITE_URL, NAV_ITEMS } from './site.config.js'
 
 // The site is only hosted on Vercel, at the root of the domain.
 const base = '/'
@@ -20,6 +20,8 @@ const categories = readJson('categories.json')
 const pages = {
   index: resolve(__dirname, 'index.html'),
   food: resolve(__dirname, 'food.html'),
+  digital: resolve(__dirname, 'digital.html'),
+  about: resolve(__dirname, 'about.html'),
   contact: resolve(__dirname, 'contact.html'),
 }
 
@@ -40,9 +42,10 @@ export default defineConfig({
 
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
-      context: { base, siteUrl: SITE_URL },
+      context: { base, siteUrl: SITE_URL, navItems: NAV_ITEMS },
       helpers: {
-        route: (path) => `${base}${path}`
+        route: (path) => `${base}${path}`,
+        eq: (a, b) => a === b,
       }
     }),
 

@@ -71,17 +71,41 @@ npm run preview   # serves the built site from dist/
 
 | Path | What it is |
 |---|---|
-| `index.html`, `food.html`, `contact.html` | Hand-written pages |
+| `index.html`, `food.html`, `digital.html`, `about.html`, `contact.html` | Hand-written pages |
 | `partials/` | Navbar and footer, shared by every page |
 | `recipes.json` | All recipes (the content of every recipe page) |
 | `categories.json` | All recipe categories |
 | `templates/` | Templates for a recipe page and a category page |
 | `scripts/generate-recipes.js` | Builds `recipe/*.html`, `categories/*.html`, `public/sitemap.xml` and `public/robots.txt` from the JSON files |
-| `site.config.js` | The site address (used for the sitemap and link previews) |
+| `site.config.js` | The site address (sitemap, link previews) and the menu items |
 | `public/images/` | Photos and site images, copied as-is |
 | `src/` | JavaScript and CSS |
 
 `recipe/`, `categories/`, `public/sitemap.xml` and `public/robots.txt` are generated on every build and are not stored in Git. Don't edit them by hand.
+
+---
+
+## 🎨 Colours and themes
+
+The site has three parts, each with its own colour:
+
+| Theme | Used on | Accent | Soft background | Text shade |
+|---|---|---|---|---|
+| `food` | Food, categories, recipes | `#36976F` | `#E9F7F1` | `#2A7757` |
+| `digital` | Digital Adventures | `#E57A9C` | `#F9E9ED` | `#A84E6A` |
+| `general` | Home, About, Contact | `#E88742` | `#FFF0E3` | `#B5571A` |
+
+Plus a cream base (`#FFFBF5`) and ink for text (`#2B2A28`).
+
+- The colours are defined once in `src/style.css` (`@theme`). Tailwind turns them into classes such as `bg-food-soft`, `text-digital-strong` or `border-general`.
+- Every page sets its theme on the body: `<body data-theme="food">`. The navbar, footer and other shared parts read the matching `--theme-*` variables, so they change colour automatically.
+- Use the "strong" shade for headings and links: orange and pink are too light for small text.
+
+## 🧭 Navigation
+
+- Menu items are listed in `NAV_ITEMS` in `site.config.js`; the navbar and footer both use that list.
+- A page marks its own menu item with `{{> navbar active="food"}}` (the `key` from `NAV_ITEMS`).
+- On small screens the menu collapses behind a Menu button (`src/navigation.js`).
 
 ---
 

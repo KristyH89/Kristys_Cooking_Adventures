@@ -2,7 +2,22 @@
 
 All notable changes to this website are listed here, newest first.
 
-## Unreleased (branch `redesign/creative-adventures`)
+## Unreleased (branch `redesign/theme-and-navigation`)
+
+Phase 2 of the redesign: colour themes and the new menu. Recipe pages and the Food section keep their green look.
+
+### Added
+- Colour palette and three page themes (`food`, `digital`, `general`) in `src/style.css`.
+- New menu: Home, Food, Digital, About, Contact, with the current page underlined.
+- Mobile menu behind a Menu button on screens below 768px.
+- Placeholder pages `digital.html` (pink) and `about.html` (orange), hidden from search engines until they have content.
+
+### Changed
+- Navbar and footer follow the page theme: home and contact are orange, food pages stay green.
+- The logo links to the home page.
+- Menu items are defined once in `site.config.js`.
+
+## Phase 1 – merged 26 November 2026 (pull request #2)
 
 The first phase of the redesign: fixes and clean-up. The site looks the same, except for the home page changes listed below. All recipe and category URLs are unchanged.
 
