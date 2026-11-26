@@ -4,19 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate": "node scripts/generate-recipes.js",
-    "dev": "node scripts/generate-recipes.js && vite",
-    "build": "node scripts/generate-recipes.js && vite build",
+    "generate": "node scripts/generate-recipes.js && node scripts/generate-maps.js",
+    "dev": "npm run generate && vite",
+    "build": "npm run generate && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.1",
+    "d3-geo": "^3.1.1",
     "sharp": "^0.35.2",
     "svgo": "^4.0.1",
     "tailwindcss": "^4.3.1",
+    "topojson-client": "^3.1.0",
     "vite": "^8.0.12",
     "vite-plugin-handlebars": "^2.0.3",
-    "vite-plugin-image-optimizer": "^2.0.3"
+    "vite-plugin-image-optimizer": "^2.0.3",
+    "world-atlas": "^2.0.2"
   },
   "dependencies": {
     "handlebars": "^4.7.9"
