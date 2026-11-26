@@ -724,7 +724,7 @@ kbd {
 
 /* ==========================================================================
    Drawing-to-photo demo (digital/examples.html)
-   The drawing lies on top of the photo. On hover a 1px line sweeps from left
+   The drawing lies on top of the photo. On hover a pink line sweeps from left
    to right while clip-path wipes the drawing away behind it. On touch screens
    a scroll-driven animation does the same (and reverses when scrolling up);
    src/drawing-reveal.js covers browsers without scroll-driven animations.
@@ -780,9 +780,10 @@ kbd {
   top: 0;
   bottom: 0;
   left: calc(var(--reveal, 0%) - 4px);
-  width: 1px;
+  width: 3px;
   z-index: 2;
   background: var(--color-digital);
+  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--color-digital) 60%, transparent);
   pointer-events: none;
   transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
