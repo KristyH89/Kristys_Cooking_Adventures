@@ -1,6 +1,9 @@
 import './style.css'
 
 import { asset } from './utils/path.js';
+import { setupNavigation } from './navigation.js';
+
+setupNavigation();
 
 // Photos shown one after another in the hero slider on the home page.
 

@@ -14,7 +14,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
-import { SITE_URL } from '../site.config.js';
+import { SITE_URL, NAV_ITEMS } from '../site.config.js';
 
 console.log('Script started.');
 
@@ -51,6 +51,7 @@ console.log('Partials registered.');
 // The site is only hosted on Vercel, at the root of the domain.
 const base = '/';
 Handlebars.registerHelper('route', (path) => `${base}${path}`);
+Handlebars.registerHelper('eq', (a, b) => a === b);
 Handlebars.registerHelper('concat', (...args) => args.slice(0, -1).join(''));
 
 // 5. Make sure the output directories exist
@@ -66,7 +67,7 @@ const generatedRecipeFiles = [];
 console.log('Generating recipe pages...');
 
 for (const recipe of recipes) {
-  const html = recipeTemplate({ base, siteUrl: SITE_URL, ...recipe });
+  const html = recipeTemplate({ base, siteUrl: SITE_URL, navItems: NAV_ITEMS, ...recipe });
   const outputPath = resolve(recipeOutputDir, `${recipe.slug}.html`);
   writeFileSync(outputPath, html, 'utf-8');
   generatedRecipeFiles.push(`recipe/${recipe.slug}.html`);
@@ -87,6 +88,7 @@ for (const category of categories) {
   const html = categoryTemplate({
     base,
     siteUrl: SITE_URL,
+    navItems: NAV_ITEMS,
     categorySlug: category.slug,
     categoryTitle: category.title,
     categoryDescription: category.description,

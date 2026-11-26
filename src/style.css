@@ -136,3 +136,130 @@
 .hero-button:hover {
   background: rgb(41, 125, 90);
 }
+/* ==========================================================================
+   Navigation (partials/navbar.hbs)
+   ========================================================================== */
+.site-nav {
+  background: var(--theme-nav-bg);
+  color: var(--theme-nav-text);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.site-nav__menu {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.site-nav__link {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+  color: var(--theme-nav-hover);
+}
+
+/* Current page */
+.site-nav__link[aria-current="page"] {
+  border-bottom-color: currentColor;
+}
+
+/* The toggle button is only shown on small screens. */
+.site-nav__toggle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .site-nav__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  /* Hamburger icon: three bars, drawn with one span and its shadows. */
+  .site-nav__icon {
+    position: relative;
+    width: 1.25rem;
+    height: 0.875rem;
+  }
+
+  .site-nav__icon span,
+  .site-nav__icon::before,
+  .site-nav__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .site-nav__icon::before { top: 0; }
+  .site-nav__icon span { top: calc(50% - 1px); }
+  .site-nav__icon::after { bottom: 0; }
+
+  /* Icon turns into a cross while the menu is open. */
+  .site-nav__toggle[aria-expanded="true"] .site-nav__icon::before {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .site-nav__toggle[aria-expanded="true"] .site-nav__icon span {
+    opacity: 0;
+  }
+  .site-nav__toggle[aria-expanded="true"] .site-nav__icon::after {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Collapsed by default; the footer repeats every link for visitors
+     without JavaScript. */
+  .site-nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0 1.5rem 1rem;
+  }
+
+  .site-nav.is-open .site-nav__menu {
+    display: flex;
+  }
+
+  .site-nav__link {
+    padding: 0.5rem 0;
+  }
+}
+
+/* ==========================================================================
+   Footer (partials/footer.hbs)
+   ========================================================================== */
+.site-footer {
+  background: var(--theme-footer-bg);
+  color: var(--theme-footer-text);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+  color: var(--theme-nav-hover);
+}
+
+.site-footer__copy {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--theme-footer-muted);
+}
