@@ -27,7 +27,7 @@ const heroImages = [
   asset("images/recipe-photos/sushibowl.jpg"),
   asset("images/recipe-photos/strawberrycheesecake.jpeg"),
   asset("images/recipe-photos/sweetpotatosalad.jpg"),
-  asset("images/recipe-photos/appeltaartonbijtje.jpg"),
+  asset("images/recipe-photos/appeltaartontbijt.jpg"),
   asset("images/recipe-photos/burruto.jpg"),
 
 
