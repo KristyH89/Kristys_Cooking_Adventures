@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Handlebars from 'handlebars';
+import { SITE_URL } from '../site.config.js';
 
 console.log('Script started.');
 
@@ -61,7 +62,7 @@ const generatedRecipeFiles = [];
 console.log('Generating recipe pages...');
 
 for (const recipe of recipes) {
-  const html = recipeTemplate({ base, ...recipe });
+  const html = recipeTemplate({ base, siteUrl: SITE_URL, ...recipe });
   const outputPath = resolve(recipeOutputDir, `${recipe.slug}.html`);
   writeFileSync(outputPath, html, 'utf-8');
   generatedRecipeFiles.push(`recipe/${recipe.slug}.html`);
@@ -81,6 +82,7 @@ for (const category of categories) {
 
   const html = categoryTemplate({
     base,
+    siteUrl: SITE_URL,
     categorySlug: category.slug,
     categoryTitle: category.title,
     categoryDescription: category.description,
@@ -93,11 +95,13 @@ for (const category of categories) {
   console.log(`Generated categories/${category.slug}.html (${matchingRecipes.length} recipes)`);
 }
 
-// 8. Generate sitemap.xml listing every page on the site.
+// 8. Generate public/sitemap.xml listing every page on the site.
 //    Search engines use this to discover and index pages more reliably.
-console.log('Generating sitemap.xml...');
+//    Files in public/ are copied as-is to the root of the deployed site,
+//    so this ends up at <SITE_URL>/sitemap.xml.
+console.log('Generating public/sitemap.xml...');
 
-const siteUrl = 'https://kristyh89.github.io/Kristys_Cooking_Adventures';
+const siteUrl = SITE_URL;
 const today = new Date().toISOString().split('T')[0];
 
 const staticPages = ['index.html', 'food.html', 'contact.html'];
@@ -121,13 +125,22 @@ ${sitemapUrls
 </urlset>
 `;
 
-writeFileSync(resolve(ROOT, 'sitemap.xml'), sitemapXml, 'utf-8');
-console.log(`Generated sitemap.xml with ${sitemapUrls.length} URLs.`);
+writeFileSync(resolve(ROOT, 'public/sitemap.xml'), sitemapXml, 'utf-8');
+console.log(`Generated public/sitemap.xml with ${sitemapUrls.length} URLs.`);
+
+// 9. Generate public/robots.txt so search engines can find the sitemap.
+const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: ${siteUrl}/sitemap.xml
+`;
+writeFileSync(resolve(ROOT, 'public/robots.txt'), robotsTxt, 'utf-8');
+console.log('Generated public/robots.txt.');
 
 console.log(`Done. Generated ${generatedRecipeFiles.length} recipe page(s) and ${generatedCategoryFiles.length} category page(s).`);
 console.log('Add these entries to your vite.config.js rollupOptions.input:');
 
-// 9. Print the full input list entries needed for vite.config.js
+// 10. Print the full input list entries needed for vite.config.js
 for (const recipe of recipes) {
   const key = recipe.slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
   console.log(`        ${key}: resolve(__dirname, 'recipe/${recipe.slug}.html'),`);

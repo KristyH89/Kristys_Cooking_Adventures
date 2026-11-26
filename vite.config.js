@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import handlebars from 'vite-plugin-handlebars'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { resolve } from 'path'
+import { SITE_URL } from './site.config.js'
 
 // The site is only hosted on Vercel, at the root of the domain.
 const base = '/'
@@ -17,7 +18,7 @@ export default defineConfig({
 
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
-      context: { base },
+      context: { base, siteUrl: SITE_URL },
       helpers: {
         route: (path) => `${base}${path}`
       }
