@@ -5,28 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Adventures – Kristy's Cooking Adventures</title>
 
-  <!-- Placeholder page: kept out of search results and out of the sitemap
+  <meta name="description" content="Digital Adventures: websites, web design, usability, WordPress and Elementor, SEO and GEO, and creative digital experiments." />
+
+  <!-- Under construction: kept out of search results and out of the sitemap
        until it has real content. Remove this tag (and add the page to
        staticPages in scripts/generate-recipes.js) when it is finished. -->
   <meta name="robots" content="noindex" />
 
   <script type="module" src="/src/main.js"></script>
   <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
+  {{> fonts}}
 </head>
 
 <body data-theme="digital" class="bg-cream text-ink font-sans flex flex-col min-h-screen">
 
 {{> navbar active="digital"}}
+{{> digital-subnav active="overview"}}
 
 <main class="flex-grow">
-  <section class="w-full bg-digital-soft py-20">
-    <div class="max-w-3xl mx-auto text-center px-6">
-      <h1 class="text-4xl font-bold text-digital-strong mb-6">Digital Adventures</h1>
+
+  <section class="page-intro">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="pixel-label text-digital-strong mb-4">Digital Adventures</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Websites, web design and creative digital ideas</h1>
+      <!-- TODO (Kristy): replace with your own introduction. -->
       <p class="text-lg leading-relaxed">
-        This part of the site is being built. Soon you will find my work on websites, web design and usability, WordPress and Elementor, SEO and GEO, and creative digital experiments here.
+        This part of the site is being built. Soon you will find my work on websites,
+        web design and usability, WordPress and Elementor, SEO and GEO, and creative
+        digital experiments here.
       </p>
     </div>
   </section>
+
+  <section class="max-w-5xl mx-auto px-6 mt-14">
+    <div class="doors">
+
+      <a href="{{route 'digital/examples.html'}}" class="door" data-theme="digital">
+        <div class="door__media door__media--pattern" aria-hidden="true"></div>
+        <div class="door__body">
+          <p class="pixel-label door__label">01 · Examples</p>
+          <h2 class="door__title">Effects, details and projects</h2>
+          <p class="door__text">
+            Short clips of interactive effects and animations, and website projects.
+          </p>
+          <span class="door__cta">See examples <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+      <a href="{{route 'digital/what-i-do.html'}}" class="door door--offset" data-theme="digital">
+        <div class="door__media door__media--pattern" aria-hidden="true"></div>
+        <div class="door__body">
+          <p class="pixel-label door__label">02 · What I do</p>
+          <h2 class="door__title">Systems, SEO, GEO and usability</h2>
+          <p class="door__text">
+            What I work with and what I can help with, one topic at a time.
+          </p>
+          <span class="door__cta">Read more <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
 </main>
 
 {{> footer }}
