@@ -43,12 +43,8 @@ console.log('Partials registered.');
 
 // 4. Register helpers, same as in vite.config.js, plus a 'concat' helper
 //    used by category.hbs to build per-recipe link paths.
-const isVercel =
-  process.env.VERCEL === '1' ||
-  process.env.VERCEL === 'true' ||
-  !!process.env.VERCEL_URL;
-
-const base = isVercel ? '/' : '/Kristys_Cooking_Adventures/';
+// The site is only hosted on Vercel, at the root of the domain.
+const base = '/';
 Handlebars.registerHelper('route', (path) => `${base}${path}`);
 Handlebars.registerHelper('concat', (...args) => args.slice(0, -1).join(''));
 
