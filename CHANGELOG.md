@@ -2,6 +2,14 @@
 
 All notable changes to this website are listed here, newest first.
 
+## Unreleased (branch `redesign/examples`)
+
+The first examples on Digital Adventures.
+
+### Added
+- Live demo on `digital/examples.html`: an image switcher with Kristy's portrait and its blueprint version (fade between images, grey to colour, slight zoom), in `src/image-switcher.js`.
+- Two effect clips in `digital-examples.json`: a scroll progress line under the header and a timeline that fills in while scrolling.
+
 ## Unreleased (branch `redesign/about`)
 
 The About page, with self-made travel maps.
