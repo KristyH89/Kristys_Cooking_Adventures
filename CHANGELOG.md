@@ -4,7 +4,7 @@ All notable changes to this website are listed here, newest first.
 
 ## Unreleased (branch `redesign/home`)
 
-Phase 3 of the redesign: the new home page.
+Phase 3 of the redesign: the new home page and the contact page.
 
 ### Added
 - Two equal entry cards on the home page: Cooking Adventures (green, with the photo slider) and Digital Adventures (pink).
@@ -13,6 +13,7 @@ Phase 3 of the redesign: the new home page.
 
 ### Changed
 - Home page restyled in the orange (general) theme, with a cream base. The full-stack text is gone; "From Ingredients to Happiness" stays.
+- Contact page restyled in the orange theme with a two-column layout. The form itself is unchanged.
 
 ## Unreleased (branch `redesign/theme-and-navigation`)
 
