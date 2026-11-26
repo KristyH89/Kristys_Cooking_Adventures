@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Kristy's Cooking Adventures</title>
 
-  <meta name="description" content="Discover homemade recipes and cooking adventures from Kristy's Cooking Adventures - Swedish, Dutch, and wild game dishes, shared while learning full-stack development." />
+  <meta name="description" content="Discover homemade recipes and cooking adventures from Kristy's Cooking Adventures - Swedish, Dutch, and wild game dishes." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Kristy's Cooking Adventures" />
-  <meta property="og:description" content="Discover homemade recipes and cooking adventures from Kristy's Cooking Adventures - Swedish, Dutch, and wild game dishes, shared while learning full-stack development." />
-  <meta property="og:image" content="https://kristyh89.github.io/Kristys_Cooking_Adventures/images/site/logoindex4.jpg" />
-  <meta property="og:url" content="https://kristyh89.github.io/Kristys_Cooking_Adventures/index.html" />
+  <meta property="og:description" content="Discover homemade recipes and cooking adventures from Kristy's Cooking Adventures - Swedish, Dutch, and wild game dishes." />
+  <meta property="og:image" content="{{siteUrl}}/images/site/logoindex4.jpg" />
+  <meta property="og:url" content="{{siteUrl}}/index.html" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kristy's Cooking Adventures" />
-  <meta name="twitter:description" content="Discover homemade recipes and cooking adventures from Kristy's Cooking Adventures - Swedish, Dutch, and wild game dishes, shared while learning full-stack development." />
-  <meta name="twitter:image" content="https://kristyh89.github.io/Kristys_Cooking_Adventures/images/site/logoindex4.jpg" />
+  <meta name="twitter:description" content="Discover homemade recipes and cooking adventures from Kristy's Cooking Adventures - Swedish, Dutch, and wild game dishes." />
+  <meta name="twitter:image" content="{{siteUrl}}/images/site/logoindex4.jpg" />
 
   <script type="module" src="/src/main.js"></script>
   <link rel="icon" type="image/png" href="/images/site/fork-knife.png" />
@@ -27,7 +27,9 @@
 
 {{> navbar }}
 
- <!-- MAIN CONTENT -->
+<main class="flex-grow">
+
+<!-- MAIN CONTENT -->
 <section class="w-full bg-[#e9f7f1] py-16">
   <div class="max-w-3xl mx-auto text-center px-6">
 
@@ -43,14 +45,10 @@
 
     <!-- INTRO TEXT -->
     <p class="text-lg text-gray-700 leading-relaxed">
-      Discover my favorite recipes and cooking adventures while at the same time following my journey 
-      as I learn and grow in HTML and CSS on my path to becoming a full-stack developer.
-    </p>
-
-     <p class="text-lg text-gray-700 leading-relaxed">
       This website combines two of my biggest passions: cooking and technology. 
       Here I experiment not only with flavors in the kitchen, but also with layouts, 
       styling, and structure in web development.
+    </p>
 
   </div>
 </section>
@@ -77,125 +75,6 @@
   </a>
 </section>
 
-
-
-  <!-- LEARNING GOALS  -->
-  <section class="mt-20">
-    <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">My Learning Goals</h2>
-
-    <div class="w-full flex justify-center">
-      <div class="w-full max-w-3xl rounded-xl shadow-lg overflow-hidden border border-green-700">
-
-        <!-- Green top bar -->
-        <div class="bg-[rgb(54,151,111)] h-3 w-full"></div>
-
-        <table class="w-full text-left">
-
-         <thead class="bg-[rgb(54,151,111)] text-white">
-          <tr>
-            <th scope="col" class="p-3 font-semibold">Skill</th>
-            <th scope="col" class="p-3 font-semibold">What I Am Learning</th>
-           <th scope="col" class="p-3 font-semibold">Level</th>
-          </tr>
-        </thead>
-
-          <tbody>
-
-            <!-- HTML -->
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">HTML</td>
-              <td class="p-3 border-t border-green-700">Semantic structure and accessibility</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- CSS -->
-            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">CSS + Frameworks</td>
-              <td class="p-3 border-t border-green-700">Flexbox, responsive design, Tailwind, Bootstrap</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- Git -->
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Git & GitHub</td>
-              <td class="p-3 border-t border-green-700">Version control, branching, merging</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- Java Fundamentals -->
-            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Java Fundamentals</td>
-              <td class="p-3 border-t border-green-700">Syntax, loops, methods, debugging</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- OOP -->
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Object-Oriented Programming</td>
-              <td class="p-3 border-t border-green-700">Classes, inheritance, polymorphism</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- Lambda -->
-            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Lambda & Stream API</td>
-              <td class="p-3 border-t border-green-700">Functional programming, filtering, mapping</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- SQL -->
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">SQL & JDBC</td>
-              <td class="p-3 border-t border-green-700">CRUD, joins, prepared statements</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- Spring -->
-            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Spring Core, Boot & JPA</td>
-              <td class="p-3 border-t border-green-700">DI, entities, repositories, relationships</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- REST -->
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">RESTful API</td>
-              <td class="p-3 border-t border-green-700">Controllers, HTTP methods, status codes</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- React -->
-            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">ReactJS L3</td>
-              <td class="p-3 border-t border-green-700">Components, Axios, Router</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- Prompt Engineering -->
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Prompt Engineering</td>
-              <td class="p-3 border-t border-green-700">AI prompting, LLM interaction</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <!-- Spring AI -->
-            <tr class="bg-[#f7faf9] hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Spring AI L1</td>
-              <td class="p-3 border-t border-green-700">AI integration, model usage</td>
-              <td class="p-3 border-t border-green-700">Intermediate</td>
-            </tr>
-
-            <tr class="hover:bg-[rgba(54,151,111,0.6)] hover:text-white transition">
-              <td class="p-3 border-t border-green-700">Spring AI L2</td>
-              <td class="p-3 border-t border-green-700">Advanced AI workflows</td>
-              <td class="p-3 border-t border-green-700">Upcoming</td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ICE CREAM STEPS (compact, professioneel, modern) -->

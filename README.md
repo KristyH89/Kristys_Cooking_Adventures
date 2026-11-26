@@ -45,11 +45,56 @@ This document contains the different steps, improvements, and lessons learned wh
 ## 🛠️ Technologies Used 
 
 - HTML5
-- CSS3
+- CSS3 and Tailwind CSS 4
+- Vite 8 (build tool)
+- Handlebars (shared navbar/footer and page templates)
 - Flexbox
 - Media Queries
 - SVG Icons
-- Git & GitHub Pages
+- Git & GitHub
+- Vercel (hosting)
+
+---
+
+## 🚀 Running the site locally
+
+```bash
+npm install
+npm run dev       # generates the recipe pages and starts a local server
+npm run build     # generates the recipe pages and builds the site into dist/
+npm run preview   # serves the built site from dist/
+```
+
+---
+
+## 🗂️ Project structure
+
+| Path | What it is |
+|---|---|
+| `index.html`, `food.html`, `contact.html` | Hand-written pages |
+| `partials/` | Navbar and footer, shared by every page |
+| `recipes.json` | All recipes (the content of every recipe page) |
+| `categories.json` | All recipe categories |
+| `templates/` | Templates for a recipe page and a category page |
+| `scripts/generate-recipes.js` | Builds `recipe/*.html`, `categories/*.html`, `public/sitemap.xml` and `public/robots.txt` from the JSON files |
+| `site.config.js` | The site address (used for the sitemap and link previews) |
+| `public/images/` | Photos and site images, copied as-is |
+| `src/` | JavaScript and CSS |
+
+`recipe/`, `categories/`, `public/sitemap.xml` and `public/robots.txt` are generated on every build and are not stored in Git. Don't edit them by hand.
+
+---
+
+## 🍳 Adding a recipe
+
+1. Put the photo in `public/images/recipe-photos/`.
+2. Add an entry to `recipes.json`. The `slug` becomes the address: `"slug": "pancakes"` gives `/recipe/pancakes.html`. Use one or more category slugs from `categories.json` in `"category"`.
+3. Run `npm run dev` to check it, then commit and push. Vercel builds and publishes it automatically.
+
+A recipe can either have `ingredients` + `steps`, or a `sections` list (for example dough, filling, topping), each with its own `ingredients` and `steps`. Optional fields: `optional`, `storage`, `tip`, `output`. Look at an existing recipe in `recipes.json` for an example of each.
+
+Never change the `slug` of an existing recipe: that changes its address and breaks existing links.
+
 ---
   
 ## 📱 Responsive Design 
