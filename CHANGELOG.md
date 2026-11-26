@@ -8,7 +8,7 @@ The About page, with self-made travel maps.
 
 ### Added
 - `about.html` with Kristy's text: intro, kitchen and creative cards (green and pink), travels, professional background and a closing with a link to Contact.
-- World map with a dot for every place in `places.json`, and a road trip map of the US West with the route, overnight stops and sights.
+- World map with a dot for every place in `places.json`, and a road trip map of the US West with the route, its stops and sights.
 - `scripts/generate-maps.js`, which draws both maps as inline SVG at build time (d3-geo, Natural Earth data via world-atlas). No map code runs in the browser.
 - A list of all places under the map, for small screens and screen readers.
 

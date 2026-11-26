@@ -149,7 +149,7 @@ every time you run `npm run dev` or `npm run build`.
   You can find the latitude and longitude by right-clicking a spot in Google Maps.
   The map zooms out by itself if the new place is outside the current view, and the list
   under the map and the country count update automatically.
-- **Road trip:** `roadTrip.stops` are the overnight stops, in driving order (the route line
+- **Road trip:** `roadTrip.stops` are the places on the route, in driving order (the route line
   follows this order). `roadTrip.sights` are the places visited along the way. If a sight's
   name overlaps another, add `"label": "left"` (or `"above"`, `"below"`).
 

@@ -133,7 +133,7 @@ function roadTripMap() {
     (stop, i, list) => list.findIndex((other) => other.name === stop.name) === i
   );
 
-  const stops = uniqueStops.map((stop) => pin(projection, stop, 'map__pin map__pin--stop', 'overnight stop')).join('');
+  const stops = uniqueStops.map((stop) => pin(projection, stop, 'map__pin map__pin--stop', 'stop along the route')).join('');
 
   // Sights are drawn as small diamonds with a name. "label" in places.json
   // (left, right, above or below; default right) moves a name that would
