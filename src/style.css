@@ -723,122 +723,123 @@ kbd {
 }
 
 /* ==========================================================================
-   Image switcher demo (digital/examples.html)
-   Image fades between photos; grey by default, full colour and a slight
-   zoom while you interact with the list or the image.
+   Drawing-to-photo demo (digital/examples.html)
+   The drawing lies on top of the photo. On hover a 1px line sweeps from left
+   to right while clip-path wipes the drawing away behind it. On touch screens
+   a scroll-driven animation does the same (and reverses when scrolling up);
+   src/drawing-reveal.js covers browsers without scroll-driven animations.
    ========================================================================== */
-.switcher-intro {
-  max-width: 40rem;
-  margin-bottom: 2rem;
-}
-
-.switcher {
+.reveal-demo {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
-@media (min-width: 900px) {
-  .switcher {
-    grid-template-columns: 1fr 1fr;
+@media (min-width: 768px) {
+  .reveal-demo {
+    grid-template-columns: 1fr minmax(16rem, 22rem);
     gap: 4rem;
   }
 }
 
-.switcher__media {
-  position: relative;
-  aspect-ratio: 900 / 969;
-  overflow: hidden;
-  border-radius: 1.25rem;
-  background: var(--color-digital-soft);
-  box-shadow: 0 20px 40px -20px rgb(0 0 0 / 0.3);
+.reveal {
+  margin: 0;
+  outline: none;
 }
 
-.switcher__img {
+.reveal__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.reveal__photo,
+.reveal__drawing img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  filter: saturate(0.2) contrast(1.04);
-  transition: opacity 0.45s linear, filter 0.5s, transform 0.5s;
+  object-position: 50% 0%;
 }
 
-.switcher__img.is-active {
-  opacity: 1;
+.reveal__drawing {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #ffffff;
+  clip-path: inset(0 0 0 var(--reveal, 0%));
+  transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.switcher:has(.switcher__item:hover, .switcher__item:focus-visible) .switcher__img,
-.switcher__media:hover .switcher__img {
-  filter: saturate(1) contrast(1.04);
-  transform: scale(1.02);
+/* The moving line, at the edge of the wipe */
+.reveal__frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--reveal, 0%) - 4px);
+  width: 1px;
+  z-index: 2;
+  background: var(--color-digital);
+  pointer-events: none;
+  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.switcher__list {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #e7d9de;
+@media (hover: hover) {
+  .reveal:hover .reveal__drawing,
+  .reveal:focus-visible .reveal__drawing {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  .reveal:hover .reveal__frame::after,
+  .reveal:focus-visible .reveal__frame::after {
+    left: calc(100% + 3px);
+  }
 }
 
-.switcher__item {
-  display: flex;
-  gap: 1.5rem;
-  align-items: baseline;
-  width: 100%;
-  padding: 1.75rem 0;
-  text-align: left;
-  color: #8a8286;
-  background: none;
-  border: 0;
-  border-top: 1px solid #e7d9de;
-  cursor: pointer;
-  transition: color 0.4s, border-color 0.4s, box-shadow 0.4s;
+/* Touch screens: the wipe follows the scroll position. */
+@keyframes reveal-wipe {
+  from { clip-path: inset(0 0 0 0); }
+  to { clip-path: inset(0 0 0 100%); }
 }
 
-.switcher__item[aria-selected="true"] {
-  color: var(--color-ink);
-  border-top-color: var(--color-digital);
-  box-shadow: inset 0 2px 0 var(--color-digital);
+@keyframes reveal-line {
+  from { left: -4px; }
+  to { left: calc(100% + 3px); }
 }
 
-.switcher__item:focus-visible {
-  outline: 2px solid var(--color-digital-strong);
-  outline-offset: 4px;
-}
+@media (hover: none) {
+  @supports (animation-timeline: view()) {
+    .reveal__frame {
+      view-timeline-name: --reveal-frame;
+    }
 
-.switcher__num {
-  flex: 0 0 2rem;
-  font-family: var(--font-pixel);
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  transition: color 0.4s;
-}
+    .reveal__drawing {
+      animation: reveal-wipe linear both;
+      animation-timeline: --reveal-frame;
+      animation-range: cover 30% cover 48%;
+    }
 
-.switcher__item[aria-selected="true"] .switcher__num {
-  color: var(--color-digital-strong);
-}
+    .reveal__frame::after {
+      animation: reveal-line linear both;
+      animation-timeline: --reveal-frame;
+      animation-range: cover 30% cover 48%;
+    }
+  }
 
-.switcher__name {
-  display: block;
-  font-size: clamp(1.6rem, 3vw, 2.25rem);
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.switcher__text {
-  display: block;
-  margin-top: 0.5rem;
-  line-height: 1.5;
+  /* Browsers without scroll-driven animations: the script sets --reveal. */
+  .reveal__drawing,
+  .reveal__frame::after {
+    transition: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .switcher__img,
-  .switcher__item {
+  .reveal__drawing,
+  .reveal__frame::after {
     transition: none;
-  }
-
-  .switcher__img {
-    transform: none !important;
+    animation: none;
   }
 }

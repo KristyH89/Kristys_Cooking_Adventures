@@ -3,11 +3,11 @@ import './style.css'
 import { asset } from './utils/path.js';
 import { setupNavigation } from './navigation.js';
 import { setupMapLabels } from './map-labels.js';
-import { setupImageSwitchers } from './image-switcher.js';
+import { setupDrawingReveal } from './drawing-reveal.js';
 
 setupNavigation();
 setupMapLabels();
-setupImageSwitchers();
+setupDrawingReveal();
 
 // Photos shown one after another in the hero slider on the home page.
 
